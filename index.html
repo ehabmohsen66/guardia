@@ -1,0 +1,2923 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Plan and implement Oracle Fusion Cloud ERP with Guardia Systems across Lebanon and Iraq. Connect finance, procurement, projects, data, and controls.">
+  <title>Oracle ERP Implementation in Lebanon &amp; Iraq | Guardia</title>
+  <style>@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800&family=Roboto:wght@400;500;600;700;900&display=swap");
+
+/* Full-bleed escape for Elementor containers. Scoped to this page only. */
+.elementor-widget-html:has(#guardia-oracle-erp),
+.elementor-widget-html:has(#guardia-oracle-erp) > .elementor-widget-container,
+.elementor-widget-container:has(> #guardia-oracle-erp) {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+
+.g-erp {
+  --g-blue: #243d96;
+  --g-blue-deep: #172765;
+  --g-blue-soft: #eef1fb;
+  --g-aqua: #6fc9c4;
+  --g-aqua-soft: #e9f8f6;
+  --g-orange: #f68d39;
+  --g-orange-dark: #ca6418;
+  --g-black: #15161c;
+  --g-ink: #202127;
+  --g-body: #575b65;
+  --g-line: #dfe2e8;
+  --g-smoke: #f4f5f7;
+  --g-white: #ffffff;
+  --g-success: #16744b;
+  --g-error: #b42318;
+  --g-shadow-sm: 0 12px 36px rgba(21, 22, 28, 0.08);
+  --g-shadow-lg: 0 28px 80px rgba(10, 13, 28, 0.26);
+  position: relative;
+  left: 50%;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  overflow: clip;
+  color: var(--g-body);
+  background: var(--g-white);
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.g-erp[dir="rtl"] {
+  font-family: "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+}
+
+
+.g-erp *,
+.g-erp *::before,
+.g-erp *::after {
+  box-sizing: border-box;
+}
+
+
+.g-erp img,
+.g-erp svg {
+  display: block;
+  max-width: 100%;
+}
+
+
+.g-erp a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.g-erp button,
+.g-erp input,
+.g-erp select,
+.g-erp textarea {
+  margin: 0;
+  color: inherit;
+  font: inherit;
+}
+
+
+.g-erp button,
+.g-erp select,
+.g-erp a[href] {
+  touch-action: manipulation;
+}
+
+
+.g-erp h1,
+.g-erp h2,
+.g-erp h3,
+.g-erp p,
+.g-erp ul,
+.g-erp ol {
+  margin-top: 0;
+}
+
+
+.g-erp h1,
+.g-erp h2,
+.g-erp h3 {
+  color: var(--g-black);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+
+.g-erp[dir="rtl"] h1,
+.g-erp[dir="rtl"] h2,
+.g-erp[dir="rtl"] h3 {
+  letter-spacing: 0;
+  line-height: 1.35;
+}
+
+
+.g-container {
+  position: relative;
+  width: min(1180px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+
+.g-skip-link {
+  position: fixed;
+  z-index: 9999;
+  inset-block-start: 12px;
+  inset-inline-start: 12px;
+  padding: 12px 18px;
+  transform: translateY(-160%);
+  border-radius: 4px;
+  color: var(--g-white) !important;
+  background: var(--g-blue);
+  font-weight: 700;
+  transition: transform 180ms ease-out;
+}
+
+
+.g-skip-link:focus {
+  transform: translateY(0);
+}
+
+
+.g-header {
+  position: relative;
+  z-index: 20;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--g-black);
+}
+
+
+.g-header__inner {
+  display: flex;
+  min-height: 88px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+
+.g-logo {
+  display: inline-flex;
+  flex: 0 0 auto;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+}
+
+
+.g-logo img {
+  width: 192px;
+  height: auto;
+}
+
+
+.g-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.g-nav a,
+.g-footer a,
+.g-text-link {
+  transition: color 180ms ease-out;
+}
+
+
+.g-nav a {
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.g-nav a:hover,
+.g-nav a:focus-visible {
+  color: var(--g-aqua);
+}
+
+
+.g-header__actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 14px;
+}
+
+
+.g-lang-switch {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+
+.g-lang-switch__button {
+  min-width: 48px;
+  min-height: 44px;
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.72);
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 800;
+  transition: color 180ms ease-out, background-color 180ms ease-out;
+}
+
+
+.g-lang-switch__button:hover,
+.g-lang-switch__button:focus-visible {
+  color: var(--g-white);
+}
+
+
+.g-lang-switch__button.is-active {
+  color: var(--g-black);
+  background: var(--g-aqua);
+}
+
+
+.g-button {
+  position: relative;
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 22px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  transition: background-color 190ms ease-out, border-color 190ms ease-out, color 190ms ease-out, box-shadow 190ms ease-out, transform 190ms ease-out;
+}
+
+
+.g-button:hover {
+  transform: translateY(-2px);
+}
+
+
+.g-button:active {
+  transform: translateY(0);
+}
+
+
+.g-button svg,
+.g-text-link svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+
+.g-erp[dir="rtl"] .g-button svg,
+.g-erp[dir="rtl"] .g-text-link svg {
+  transform: scaleX(-1);
+}
+
+
+.g-button--small {
+  min-height: 44px;
+  padding: 10px 17px;
+  font-size: 13px;
+}
+
+
+.g-button--large {
+  min-height: 58px;
+  padding-inline: 28px;
+}
+
+
+.g-button--block {
+  width: 100%;
+}
+
+
+.g-button--primary {
+  color: var(--g-white) !important;
+  background: var(--g-blue);
+  box-shadow: 0 10px 24px rgba(36, 61, 150, 0.2);
+}
+
+
+.g-button--primary:hover {
+  background: var(--g-blue-deep);
+  box-shadow: 0 14px 30px rgba(36, 61, 150, 0.28);
+}
+
+
+.g-button--orange {
+  color: var(--g-black) !important;
+  background: var(--g-orange);
+  box-shadow: 0 10px 24px rgba(246, 141, 57, 0.22);
+}
+
+
+.g-button--orange:hover {
+  background: #ff9d51;
+  box-shadow: 0 14px 30px rgba(246, 141, 57, 0.3);
+}
+
+
+.g-button--ghost {
+  color: var(--g-blue) !important;
+  border-color: var(--g-line);
+  background: var(--g-white);
+}
+
+
+.g-button--ghost:hover {
+  border-color: var(--g-blue);
+  background: var(--g-blue-soft);
+}
+
+
+.g-button--outline-light {
+  color: var(--g-white) !important;
+  border-color: rgba(255, 255, 255, 0.42);
+  background: transparent;
+}
+
+
+.g-button--outline-light:hover {
+  color: var(--g-black) !important;
+  border-color: var(--g-aqua);
+  background: var(--g-aqua);
+}
+
+
+.g-button:disabled {
+  transform: none;
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+
+.g-erp :where(a, button, input, select, textarea, summary):focus-visible {
+  outline: 3px solid var(--g-aqua);
+  outline-offset: 3px;
+}
+
+
+.g-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 84px 0 92px;
+  color: rgba(255, 255, 255, 0.78);
+  background:
+    radial-gradient(circle at 18% 22%, rgba(36, 61, 150, 0.52), transparent 34%),
+    radial-gradient(circle at 77% 72%, rgba(111, 201, 196, 0.16), transparent 28%),
+    linear-gradient(118deg, #121319 0%, #17213e 62%, #14161d 100%);
+}
+
+
+.g-hero__grid,
+.g-why__grid {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.38;
+  background-image:
+    linear-gradient(rgba(111, 201, 196, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(111, 201, 196, 0.08) 1px, transparent 1px),
+    radial-gradient(circle, rgba(246, 141, 57, 0.44) 1px, transparent 1.5px);
+  background-position: center, center, 12px 12px;
+  background-size: 64px 64px, 64px 64px, 28px 28px;
+  mask-image: linear-gradient(90deg, #000, transparent 72%);
+}
+
+
+.g-erp[dir="rtl"] .g-hero__grid,
+.g-erp[dir="rtl"] .g-why__grid {
+  mask-image: linear-gradient(-90deg, #000, transparent 72%);
+}
+
+
+.g-hero__beam {
+  position: absolute;
+  z-index: -1;
+  inset-block: -20%;
+  inset-inline-end: -6%;
+  width: 27%;
+  transform: skewX(-15deg);
+  background: linear-gradient(180deg, rgba(246, 141, 57, 0.94), rgba(246, 141, 57, 0.45));
+  box-shadow: -80px 0 0 rgba(111, 201, 196, 0.15);
+}
+
+
+.g-erp[dir="rtl"] .g-hero__beam {
+  transform: skewX(15deg);
+  box-shadow: 80px 0 0 rgba(111, 201, 196, 0.15);
+}
+
+
+.g-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(390px, 0.82fr);
+  align-items: center;
+  gap: clamp(44px, 6vw, 90px);
+}
+
+
+.g-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+
+.g-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 19px;
+  color: var(--g-blue);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+
+.g-erp[dir="rtl"] .g-eyebrow {
+  letter-spacing: 0;
+}
+
+
+.g-eyebrow--light {
+  color: var(--g-aqua);
+}
+
+
+.g-eyebrow__dot {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 auto;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(111, 201, 196, 0.12);
+}
+
+
+.g-eyebrow__line {
+  width: 32px;
+  height: 2px;
+  flex: 0 0 auto;
+  background: currentColor;
+}
+
+
+.g-hero h1 {
+  max-width: 720px;
+  margin-bottom: 24px;
+  color: var(--g-white);
+  font-size: clamp(46px, 5.2vw, 76px);
+  font-weight: 900;
+}
+
+
+.g-erp[dir="rtl"] .g-hero h1 {
+  font-size: clamp(40px, 4.5vw, 64px);
+}
+
+
+.g-lead-card {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  padding: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 8px;
+  color: var(--g-body);
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: var(--g-shadow-lg);
+}
+
+
+.g-lead-card__accent {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--g-aqua) 0 46%, var(--g-orange) 46% 67%, var(--g-blue) 67% 100%);
+}
+
+
+.g-lead-card__header {
+  margin-bottom: 22px;
+}
+
+
+.g-form-kicker {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--g-blue);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+
+.g-erp[dir="rtl"] .g-form-kicker {
+  letter-spacing: 0;
+}
+
+
+.g-lead-card h2 {
+  margin-bottom: 11px;
+  font-size: clamp(26px, 2.6vw, 34px);
+}
+
+
+.g-lead-card__header p {
+  margin-bottom: 0;
+  color: #646872;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+.g-form-progress {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+
+.g-form-progress__track {
+  height: 5px;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e6e8ed;
+}
+
+
+.g-form-progress__track span {
+  display: block;
+  width: 50%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--g-blue);
+  transition: width 220ms ease-out;
+}
+
+
+.g-form-progress.is-complete .g-form-progress__track span {
+  width: 100%;
+}
+
+
+.g-form-progress p {
+  flex: 0 0 auto;
+  margin-bottom: 0;
+  color: #6b6f79;
+  font-size: 12px;
+}
+
+
+.g-form-progress strong {
+  color: var(--g-blue);
+}
+
+
+.g-form-step {
+  display: none;
+}
+
+
+.g-form-step.is-active {
+  display: block;
+  animation: g-step-in 220ms ease-out both;
+}
+
+
+@keyframes g-step-in {
+  from { opacity: 0; transform: translateY(7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.g-field,
+.g-field-row {
+  margin-bottom: 15px;
+}
+
+
+.g-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+
+.g-field-row .g-field {
+  margin-bottom: 0;
+}
+
+
+.g-field label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--g-ink);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+.g-field input,
+.g-field select,
+.g-field textarea {
+  width: 100%;
+  min-height: 50px;
+  padding: 11px 13px;
+  border: 1px solid #ccd0d8;
+  border-radius: 4px;
+  outline: 0;
+  color: var(--g-ink);
+  background: var(--g-white);
+  font-size: 15px;
+  line-height: 1.45;
+  transition: border-color 170ms ease-out, box-shadow 170ms ease-out, background-color 170ms ease-out;
+}
+
+
+.g-field textarea {
+  min-height: 84px;
+  resize: vertical;
+}
+
+
+.g-field input::placeholder,
+.g-field textarea::placeholder {
+  color: #8a8e97;
+  opacity: 1;
+}
+
+
+.g-field input:hover,
+.g-field select:hover,
+.g-field textarea:hover {
+  border-color: #9ca4b5;
+}
+
+
+.g-field input:focus,
+.g-field select:focus,
+.g-field textarea:focus {
+  border-color: var(--g-blue);
+  box-shadow: 0 0 0 4px rgba(36, 61, 150, 0.11);
+}
+
+
+.g-field input[aria-invalid="true"],
+.g-field select[aria-invalid="true"],
+.g-field textarea[aria-invalid="true"] {
+  border-color: var(--g-error);
+  background: #fff7f6;
+}
+
+
+.g-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 4px 0 18px;
+  color: #626670;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+
+.g-consent input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  margin-top: 1px;
+  accent-color: var(--g-blue);
+}
+
+
+.g-consent a {
+  color: var(--g-blue);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+
+.g-form-actions {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+}
+
+
+.g-form-status {
+  min-height: 0;
+  margin-top: 14px;
+  padding: 0;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+
+.g-form-status:not(:empty) {
+  min-height: 46px;
+  padding: 12px 14px;
+}
+
+
+.g-form-status.is-success {
+  color: #0d5133;
+  border: 1px solid #a6dfc5;
+  background: #ebfaf3;
+}
+
+
+.g-form-status.is-error {
+  color: #7a2018;
+  border: 1px solid #efb4ad;
+  background: #fff1ef;
+}
+
+
+.g-form-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0 0;
+  color: #777b84;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+
+.g-form-note svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  color: var(--g-success);
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+
+.g-noscript {
+  color: var(--g-error);
+  font-size: 13px;
+}
+
+
+.g-noscript a {
+  color: var(--g-blue);
+  text-decoration: underline;
+}
+
+
+.g-section {
+  position: relative;
+  padding: 104px 0;
+}
+
+
+.g-section h2 {
+  margin-bottom: 20px;
+  font-size: clamp(36px, 4.2vw, 58px);
+}
+
+
+.g-erp[dir="rtl"] .g-section h2 {
+  font-size: clamp(34px, 3.8vw, 52px);
+}
+
+
+.g-text-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 9px;
+  color: var(--g-blue) !important;
+  font-weight: 800;
+}
+
+
+.g-text-link:hover {
+  color: var(--g-orange-dark) !important;
+}
+
+
+.g-section--roi {
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, var(--g-white), #f8f9fc 58%, var(--g-white));
+}
+
+
+.g-roi-calculator {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(330px, .65fr);
+  overflow: hidden;
+  border: 1px solid #d7dbe4;
+  border-radius: 8px;
+  background: var(--g-white);
+  box-shadow: var(--g-shadow-sm);
+}
+
+
+.g-roi-calculator__input {
+  padding: 38px;
+}
+
+
+.g-roi-calculator__heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+
+.g-roi-calculator__heading h3 {
+  max-width: 590px;
+  margin-bottom: 0;
+  font-size: clamp(26px, 2.8vw, 36px);
+}
+
+
+.g-roi-calculator__kicker {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--g-blue);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+
+.g-erp[dir="rtl"] .g-roi-calculator__kicker {
+  letter-spacing: 0;
+}
+
+
+.g-roi-currency {
+  width: 112px;
+  flex: 0 0 auto;
+  margin-bottom: 0;
+}
+
+
+.g-roi-fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+
+.g-roi-fields .g-field {
+  margin-bottom: 0;
+}
+
+
+.g-roi-fields input,
+.g-roi-assumptions input,
+.g-roi-currency select {
+  font-variant-numeric: tabular-nums;
+}
+
+
+.g-roi-assumptions {
+  margin-top: 22px;
+  border-top: 1px solid var(--g-line);
+  border-bottom: 1px solid var(--g-line);
+}
+
+
+.g-roi-assumptions summary {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  color: var(--g-blue);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 800;
+  list-style: none;
+}
+
+
+.g-roi-assumptions summary::-webkit-details-marker {
+  display: none;
+}
+
+
+.g-roi-assumptions summary svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  transition: transform 180ms ease-out;
+}
+
+
+.g-roi-assumptions[open] summary svg {
+  transform: rotate(180deg);
+}
+
+
+.g-roi-assumptions__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  padding: 0 0 22px;
+}
+
+
+.g-roi-assumptions__grid .g-field {
+  margin-bottom: 0;
+}
+
+
+.g-percent-field {
+  position: relative;
+}
+
+
+.g-percent-field input {
+  padding-inline-end: 38px;
+}
+
+
+.g-percent-field span {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: 14px;
+  transform: translateY(-50%);
+  color: #6e7380;
+  font-size: 14px;
+  font-weight: 800;
+  pointer-events: none;
+}
+
+
+.g-roi-calculator__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+
+.g-roi-calculator__result {
+  display: flex;
+  min-width: 0;
+  padding: 40px 34px;
+  flex-direction: column;
+  color: rgba(255, 255, 255, .7);
+  background:
+    radial-gradient(circle at 100% 0, rgba(111, 201, 196, .21), transparent 38%),
+    var(--g-blue-deep);
+}
+
+
+.g-roi-result__label {
+  margin-bottom: 9px;
+  color: var(--g-aqua);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+
+.g-erp[dir="rtl"] .g-roi-result__label {
+  letter-spacing: 0;
+}
+
+
+.g-roi-calculator__result > strong {
+  overflow-wrap: anywhere;
+  color: var(--g-white);
+  font-size: clamp(34px, 3.3vw, 48px);
+  font-weight: 900;
+  letter-spacing: -.04em;
+  line-height: 1.08;
+  font-variant-numeric: tabular-nums;
+}
+
+
+.g-erp[dir="rtl"] .g-roi-calculator__result > strong {
+  letter-spacing: 0;
+}
+
+
+.g-roi-calculator__result > p {
+  margin: 9px 0 26px;
+  color: rgba(255, 255, 255, .55);
+  font-size: 12px;
+}
+
+
+.g-roi-breakdown {
+  display: grid;
+  gap: 0;
+  margin: 0 0 28px;
+}
+
+
+.g-roi-breakdown > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid rgba(255, 255, 255, .14);
+}
+
+
+.g-roi-breakdown dt {
+  font-size: 12px;
+}
+
+
+.g-roi-breakdown dd {
+  margin: 0;
+  color: var(--g-white);
+  font-size: 14px;
+  font-weight: 800;
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+
+.g-roi-breakdown__total dt,
+.g-roi-breakdown__total dd {
+  color: var(--g-aqua);
+  font-weight: 900;
+}
+
+
+.g-roi-calculator__result .g-button {
+  margin-top: auto;
+}
+
+
+.g-roi-disclaimer {
+  max-width: 1040px;
+  margin: 18px auto 0;
+  color: #717681;
+  font-size: 11px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+
+.g-section-heading {
+  max-width: 780px;
+  margin-bottom: 52px;
+}
+
+
+.g-section-heading--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+
+.g-section-heading--center .g-eyebrow {
+  justify-content: center;
+}
+
+
+.g-section-heading > p:last-child {
+  max-width: 690px;
+  margin: 0 auto;
+  color: #676b75;
+  font-size: 17px;
+}
+
+
+.g-source-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  color: var(--g-blue) !important;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+
+.g-source-link:hover,
+.g-source-link:focus-visible {
+  color: var(--g-orange-dark) !important;
+}
+
+
+.g-source-link svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+
+.g-faq-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.65fr) minmax(440px, 1fr);
+  gap: clamp(56px, 9vw, 130px);
+}
+
+
+.g-faq-intro {
+  align-self: start;
+}
+
+
+.g-faq-intro > p:not(.g-eyebrow) {
+  margin-bottom: 28px;
+  color: #656a74;
+  font-size: 16px;
+}
+
+
+.g-accordion {
+  border-top: 1px solid var(--g-line);
+}
+
+
+.g-accordion details {
+  border-bottom: 1px solid var(--g-line);
+}
+
+
+.g-accordion summary {
+  display: flex;
+  min-height: 86px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 22px 4px;
+  color: var(--g-ink);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.4;
+  list-style: none;
+}
+
+
+.g-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+
+.g-accordion summary svg {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  color: var(--g-blue);
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  transition: transform 190ms ease-out;
+}
+
+
+.g-accordion details[open] summary svg {
+  transform: rotate(180deg);
+}
+
+
+.g-accordion details p {
+  max-width: 680px;
+  margin: -2px 0 26px;
+  padding-inline-end: 42px;
+  color: #676b75;
+  font-size: 15px;
+  line-height: 1.78;
+}
+
+
+.g-footer {
+  color: rgba(255, 255, 255, 0.58);
+  background: var(--g-black);
+}
+
+
+.g-footer__inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  min-height: 150px;
+  align-items: center;
+  gap: 40px;
+}
+
+
+.g-logo--footer img {
+  width: 158px;
+}
+
+
+.g-footer p {
+  max-width: 420px;
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+
+.g-footer__meta {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 12px;
+}
+
+
+.g-footer__meta a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+}
+
+
+.g-footer a:hover,
+.g-footer a:focus-visible {
+  color: var(--g-aqua);
+}
+
+
+@media (max-width: 1100px){
+.g-nav { display: none; }
+
+  .g-hero__inner { grid-template-columns: minmax(0, 1fr) minmax(360px, .82fr); gap: 42px; }
+}
+
+
+
+@media (max-width: 900px){
+.g-header__actions > .g-button { display: none; }
+
+  .g-hero { padding: 68px 0 80px; }
+
+  .g-hero__inner { grid-template-columns: 1fr; }
+
+  .g-hero__content { max-width: 760px; }
+
+  .g-hero__beam { width: 36%; opacity: .48; }
+
+  .g-lead-card { width: min(620px, 100%); }
+
+  .g-intro-grid,
+  .g-why__layout,
+  .g-faq-layout { grid-template-columns: 1fr; }
+
+  .g-roi-calculator { grid-template-columns: 1fr; }
+
+  .g-roi-calculator__result { min-height: 480px; }
+
+  .g-faq-intro { max-width: 720px; }
+
+  .g-footer__inner { grid-template-columns: auto 1fr; padding: 32px 0; }
+
+  .g-footer__meta { grid-column: 1 / -1; justify-content: space-between; }
+}
+
+
+
+@media (max-width: 700px){
+.g-container { width: min(100% - 32px, 1180px); }
+
+  .g-header__inner { min-height: 76px; gap: 14px; }
+
+  .g-logo img { width: 152px; }
+
+  .g-lang-switch__button { min-width: 44px; padding-inline: 9px; }
+
+  .g-hero { padding-top: 52px; }
+
+  .g-hero h1 { font-size: clamp(40px, 12vw, 56px); }
+
+  .g-erp[dir="rtl"] .g-hero h1 { font-size: clamp(36px, 10vw, 50px); }
+
+  .g-lead-card { padding: 32px 22px 26px; }
+
+  .g-field-row { grid-template-columns: 1fr; }
+
+  .g-form-actions { grid-template-columns: 1fr; }
+
+  .g-form-actions .g-button--ghost { order: 2; }
+
+  .g-section { padding: 76px 0; }
+
+  .g-section-heading { margin-bottom: 36px; }
+
+  .g-section h2 { font-size: clamp(33px, 9.5vw, 46px); }
+
+  .g-roi-calculator__input,
+  .g-roi-calculator__result { padding: 28px 22px; }
+
+  .g-roi-calculator__heading { align-items: stretch; flex-direction: column; gap: 18px; }
+
+  .g-roi-currency { width: 100%; }
+
+  .g-roi-fields,
+  .g-roi-assumptions__grid { grid-template-columns: 1fr; }
+
+  .g-roi-calculator__actions { flex-direction: column; }
+
+  .g-roi-calculator__actions .g-button { width: 100%; }
+
+  .g-roi-calculator__result { min-height: 0; }
+
+  .g-roi-disclaimer { text-align: start; }
+
+  .g-accordion summary { min-height: 78px; font-size: 16px; }
+
+  .g-accordion details p { padding-inline-end: 0; }
+
+  .g-footer__inner { grid-template-columns: 1fr; gap: 22px; text-align: start; }
+
+  .g-footer__meta { grid-column: auto; align-items: flex-start; flex-direction: column; gap: 8px; }
+}
+
+
+
+@media (max-width: 430px){
+.g-container { width: min(100% - 24px, 1180px); }
+
+  .g-header__inner { min-height: 70px; }
+
+  .g-logo img { width: 132px; }
+
+  .g-lang-switch { padding: 2px; }
+
+  .g-lang-switch__button { min-width: 44px; min-height: 44px; font-size: 12px; }
+
+  .g-lead-card { padding-inline: 18px; }
+
+  .g-roi-breakdown > div { align-items: flex-start; flex-direction: column; gap: 3px; }
+
+  .g-roi-breakdown dd { text-align: start; }
+}
+
+
+
+@media (prefers-reduced-motion: reduce){
+.g-erp *,
+  .g-erp *::before,
+  .g-erp *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+
+@media print{
+.g-header__actions,
+  .g-nav,
+  .g-lead-card,
+  .g-roi-calculator__actions,
+  .g-final-cta { display: none !important; }
+
+  .g-hero,
+  .g-section--why { color: #202127; background: #fff; }
+
+  .g-hero h1,
+  .g-section--why h2,
+  .g-section--why h3 { color: #15161c; }
+}
+
+
+
+/* =========================================================
+   v2 — conversion redesign (overrides + new components)
+   ========================================================= */
+
+.g-erp [hidden] { display: none !important; }
+
+/* ---------- Header: logo breathing room ---------- */
+.g-header { padding-block: 10px; }
+.g-header__inner { min-height: 112px; padding-block: 8px; }
+.g-logo { padding-block: 6px; }
+.g-logo img { width: 196px; height: auto; margin-block: 4px; }
+.g-nav { gap: 26px; }
+
+/* ---------- Hero ---------- */
+.g-hero { padding: 68px 0 84px; }
+.g-hero__inner { grid-template-columns: minmax(0, 1.12fr) minmax(380px, .78fr); align-items: center; gap: clamp(36px, 5vw, 76px); }
+.g-hero__content { max-width: 720px; }
+.g-hero h1 { font-size: clamp(38px, 4.5vw, 62px); margin-bottom: 20px; }
+.g-erp[dir="rtl"] .g-hero h1 { font-size: clamp(34px, 4vw, 54px); }
+.g-hero__lead { max-width: 600px; margin-bottom: 24px; color: rgba(255,255,255,.82); font-size: 18px; line-height: 1.65; }
+.g-check-list { display: flex; flex-wrap: wrap; gap: 10px 24px; margin: 0 0 30px; padding: 0; list-style: none; }
+.g-check-list li { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.92); font-weight: 600; font-size: 15px; }
+.g-check-list svg { width: 22px; height: 22px; flex: 0 0 auto; padding: 4px; border-radius: 50%; color: var(--g-black); background: var(--g-aqua); fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.8; }
+.g-hero__ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 0; }
+.g-button--outline-light { border-color: rgba(255,255,255,.4); }
+
+.g-hero__visual { position: relative; width: min(460px, 100%); margin: 0; padding: 14px; border-radius: 26px; background: radial-gradient(circle at 50% 35%, #ffffff 0%, #e6ecfb 100%); box-shadow: 0 30px 60px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.6); }
+.g-hero__visual img { position: relative; z-index: 1; width: 100%; height: auto; filter: drop-shadow(0 14px 18px rgba(23,39,101,.25)); }
+.g-float { position: absolute; z-index: 2; display: flex; align-items: center; gap: 10px; padding: 11px 16px; border-radius: 14px; color: var(--g-ink); background: rgba(255,255,255,.97); box-shadow: 0 18px 40px rgba(0,0,0,.3); font-size: 13px; font-weight: 700; line-height: 1.3; animation: g-float 6s ease-in-out infinite; }
+.g-float strong { color: var(--g-blue); font-size: 30px; font-weight: 900; line-height: 1; }
+.g-float svg { width: 26px; height: 26px; flex: 0 0 auto; fill: none; stroke: var(--g-orange-dark); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.g-float--a { top: 6%; inset-inline-start: -7%; max-width: 170px; }
+.g-float--b { bottom: 8%; inset-inline-end: -5%; animation-delay: -3s; }
+@keyframes g-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+.g-lead-card { position: relative; top: 0; }
+.g-lead-card__header { margin-bottom: 14px; }
+
+/* ---------- Trust strip ---------- */
+.g-trust-strip { background: var(--g-white); border-bottom: 1px solid var(--g-line); }
+.g-trust-strip__inner { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-block: 0; padding: 26px 0; list-style: none; }
+.g-trust-strip__inner li { display: flex; align-items: center; gap: 14px; color: var(--g-ink); font-size: 14px; font-weight: 600; line-height: 1.35; }
+.g-trust-strip__inner strong { color: var(--g-blue); font-size: 38px; font-weight: 900; letter-spacing: -.03em; line-height: 1; }
+.g-trust-strip__inner svg { width: 34px; height: 34px; flex: 0 0 auto; padding: 7px; border-radius: 10px; background: var(--g-aqua-soft); fill: none; stroke: #168a84; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ---------- Sections ---------- */
+.g-section { padding: 76px 0; }
+.g-section-heading { margin-bottom: 40px; }
+.g-section-heading h2, .g-final-cta h2, .g-faq-intro h2 { font-size: clamp(30px, 3.4vw, 44px); }
+.g-section-heading > p:last-child { max-width: 560px; margin-inline: auto; }
+.g-section-cta { display: flex; justify-content: center; margin-top: 34px; }
+
+/* Why Oracle */
+.g-section--why { background: var(--g-white); color: var(--g-body); }
+.g-why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.g-why-card { padding: 26px 22px; border: 1px solid var(--g-line); border-radius: 16px; background: var(--g-white); transition: transform 200ms ease-out, box-shadow 200ms ease-out, border-color 200ms ease-out; }
+.g-why-card:hover { transform: translateY(-4px); border-color: var(--g-aqua); box-shadow: var(--g-shadow-sm); }
+.g-why-card__icon { display: grid; width: 48px; height: 48px; margin-bottom: 16px; place-items: center; border-radius: 14px; background: linear-gradient(135deg, var(--g-blue), #3a57c4); }
+.g-why-card__icon svg { width: 24px; height: 24px; fill: none; stroke: #fff; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.g-why-card h3 { margin-bottom: 8px; font-size: 18px; letter-spacing: -.02em; line-height: 1.25; }
+.g-why-card p { margin: 0; font-size: 14.5px; line-height: 1.6; }
+
+/* Modules */
+.g-section--modules { background: var(--g-smoke); }
+.g-modules { display: grid; grid-template-columns: 270px 1fr; gap: 28px; padding: 24px; border: 1px solid var(--g-line); border-radius: 22px; background: var(--g-white); box-shadow: var(--g-shadow-sm); }
+.g-tabs { display: grid; align-content: start; gap: 8px; }
+.g-tab { padding: 15px 18px; border: 1px solid transparent; border-radius: 12px; color: var(--g-ink); background: var(--g-smoke); font-weight: 700; font-size: 15px; text-align: start; cursor: pointer; transition: background 160ms ease-out, color 160ms ease-out; }
+.g-tab:hover { background: var(--g-blue-soft); }
+.g-tab.is-active { color: #fff; background: var(--g-blue); }
+.g-tab-panel { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 24px; min-height: 340px; animation: g-fade 280ms ease-out; }
+@keyframes g-fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.g-module-list { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.g-module-list li { display: flex; align-items: flex-start; gap: 12px; color: var(--g-ink); font-weight: 600; line-height: 1.45; }
+.g-module-list svg { width: 22px; height: 22px; flex: 0 0 auto; padding: 4px; border-radius: 50%; background: var(--g-aqua-soft); fill: none; stroke: #168a84; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.g-module-visual { display: grid; place-items: center; border-radius: 18px; background: radial-gradient(circle at 50% 40%, #e9eefc, #f7f8fc 70%); }
+.g-module-visual img { width: 100%; max-height: 360px; object-fit: contain; }
+
+.g-deploy { margin-top: 34px; }
+.g-deploy__title { margin-bottom: 16px; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: var(--g-body); font-weight: 900; }
+.g-erp[dir="rtl"] .g-deploy__title { letter-spacing: 0; }
+.g-deploy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.g-deploy-card { padding: 20px 22px; border: 1px solid var(--g-line); border-radius: 14px; background: var(--g-white); }
+.g-deploy-card h3 { margin: 10px 0 6px; font-size: 18px; }
+.g-deploy-card p { margin: 0; font-size: 14.5px; }
+.g-deploy-card__tag { display: inline-block; padding: 3px 10px; border-radius: 99px; color: #0f6f6a; background: var(--g-aqua-soft); font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.g-deploy-card:last-child .g-deploy-card__tag { color: var(--g-orange-dark); background: #fff0e3; }
+.g-erp[dir="rtl"] .g-deploy-card__tag { letter-spacing: 0; }
+
+/* ROI */
+.g-section--roi { background: var(--g-white); }
+
+/* Proof */
+.g-section--proof { background: var(--g-white); }
+.g-testi { display: grid; grid-template-columns: 1.3fr 1fr; gap: 22px; }
+.g-testi__quote { position: relative; display: flex; flex-direction: column; justify-content: space-between; gap: 26px; margin: 0; padding: 38px 38px 32px; border-radius: 22px; color: rgba(255,255,255,.9); background: linear-gradient(135deg, #172765 0%, #243d96 100%); overflow: hidden; }
+.g-testi__quote::after { content: ""; position: absolute; inset-block-start: -40%; inset-inline-end: -12%; width: 260px; height: 140%; transform: skewX(-15deg); background: rgba(111,201,196,.12); }
+.g-testi__mark { position: relative; z-index: 1; width: 44px; height: 44px; fill: none; stroke: var(--g-aqua); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.g-testi__quote blockquote { position: relative; z-index: 1; margin: 0; }
+.g-testi__quote p { margin: 0; color: #fff; font-size: clamp(18px, 1.7vw, 22px); font-weight: 500; line-height: 1.55; }
+.g-testi__quote figcaption { position: relative; z-index: 1; display: flex; align-items: center; gap: 14px; }
+.g-testi__quote figcaption strong { display: block; color: #fff; font-size: 16px; }
+.g-testi__quote figcaption span > span { color: rgba(255,255,255,.7); font-size: 13px; }
+.g-avatar { display: grid; width: 50px; height: 50px; flex: 0 0 auto; place-items: center; border-radius: 50%; background: var(--g-aqua); }
+.g-avatar svg { width: 24px; height: 24px; fill: none; stroke: var(--g-black); stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.g-testi__results { display: flex; flex-direction: column; justify-content: center; gap: 18px; padding: 32px; border: 1px solid var(--g-line); border-radius: 22px; background: var(--g-white); box-shadow: var(--g-shadow-sm); }
+.g-testi__label, .g-proof-card__type { color: var(--g-blue); font-size: 12px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+.g-erp[dir="rtl"] .g-testi__label, .g-erp[dir="rtl"] .g-proof-card__type { letter-spacing: 0; }
+.g-testi__stats { display: grid; gap: 14px; }
+.g-testi__stats div { display: flex; align-items: baseline; gap: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--g-line); color: var(--g-ink); font-weight: 600; line-height: 1.35; }
+.g-testi__stats strong { min-width: 78px; color: var(--g-orange-dark); font-size: 40px; font-weight: 900; letter-spacing: -.03em; line-height: 1; }
+
+.g-case-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 22px; }
+.g-case-card { display: flex; align-items: flex-start; gap: 18px; padding: 26px; border: 1px solid var(--g-line); border-radius: 18px; background: var(--g-white); }
+.g-case-card h4 { margin: 4px 0 6px; color: var(--g-black); font-size: 20px; }
+.g-case-card strong { display: block; margin-bottom: 10px; color: var(--g-ink); font-size: 15px; line-height: 1.4; }
+.g-proof-note { margin: 18px 0 0; color: var(--g-body); font-size: 13px; text-align: center; }
+
+.g-oracle-block { margin-top: 36px; padding: 28px; border-radius: 20px; background: var(--g-smoke); }
+.g-oracle-block__head { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-bottom: 20px; }
+.g-oracle-block__head p { margin: 0; font-size: 14px; }
+.g-proof-badge { display: inline-block; padding: 5px 12px; border-radius: 99px; color: #fff; background: #b0261a; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.g-erp[dir="rtl"] .g-proof-badge { letter-spacing: 0; }
+.g-oracle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.g-oracle-card { padding: 22px; border-radius: 14px; background: var(--g-white); }
+.g-oracle-card h4 { margin: 4px 0 6px; color: var(--g-black); font-size: 18px; }
+.g-oracle-card strong { display: block; color: var(--g-orange-dark); font-size: 32px; font-weight: 900; letter-spacing: -.03em; line-height: 1.1; }
+.g-oracle-card p { margin: 6px 0 12px; font-size: 14px; line-height: 1.5; }
+
+/* Process */
+.g-section--approach { background: var(--g-smoke); }
+.g-process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin: 0; padding: 0; list-style: none; counter-reset: none; }
+.g-process li { position: relative; padding: 24px 22px; border: 1px solid var(--g-line); border-radius: 16px; background: var(--g-white); }
+.g-process li > span { display: grid; width: 38px; height: 38px; margin-bottom: 14px; place-items: center; border-radius: 50%; color: #fff; background: var(--g-orange-dark); font-size: 13px; font-weight: 900; }
+.g-process h3 { margin-bottom: 6px; font-size: 19px; }
+.g-process p { margin: 0; font-size: 14.5px; }
+
+/* FAQ */
+.g-section--faq { background: var(--g-white); }
+
+/* Final CTA */
+.g-final-cta { position: relative; isolation: isolate; overflow: hidden; padding: 84px 0; color: rgba(255,255,255,.82); background: #11172f; }
+.g-final-cta__bg { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.g-final-cta::before { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(100deg, rgba(17,23,47,.95) 30%, rgba(17,23,47,.35) 100%); }
+.g-erp[dir="rtl"] .g-final-cta::before { background: linear-gradient(-100deg, rgba(17,23,47,.95) 30%, rgba(17,23,47,.35) 100%); }
+.g-final-cta__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px; }
+.g-final-cta h2 { max-width: 640px; margin-bottom: 22px; color: #fff; }
+.g-contact-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.g-contact-list li { display: flex; align-items: center; gap: 12px; font-weight: 600; }
+.g-contact-list svg { width: 20px; height: 20px; flex: 0 0 auto; fill: none; stroke: var(--g-aqua); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.g-contact-list a { color: #fff; border-bottom: 1px solid rgba(255,255,255,.3); }
+.g-contact-list a:hover { border-color: var(--g-aqua); }
+
+/* ---------- Sticky mobile bar ---------- */
+.g-sticky { position: fixed; z-index: 90; inset-inline: 0; inset-block-end: 0; display: none; gap: 10px; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); box-shadow: 0 -10px 30px rgba(10,13,28,.16); transform: translateY(110%); transition: transform 240ms ease-out; backdrop-filter: blur(8px); }
+.g-sticky.is-visible { transform: none; }
+.g-sticky .g-button--orange { flex: 1; justify-content: center; }
+.g-button--outline-dark { min-width: 52px; justify-content: center; border: 2px solid var(--g-blue); color: var(--g-blue); background: transparent; }
+.g-button--outline-dark svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ---------- Exit-intent popup ---------- */
+.g-pop { position: fixed; z-index: 10000; inset: 0; display: grid; place-items: center; padding: 16px; }
+.g-pop__backdrop { position: absolute; inset: 0; background: rgba(10,13,28,.7); backdrop-filter: blur(4px); animation: g-fade-in 220ms ease-out; }
+@keyframes g-fade-in { from { opacity: 0; } to { opacity: 1; } }
+.g-pop__panel { position: relative; display: grid; grid-template-columns: .9fr 1.1fr; width: min(840px, 100%); max-height: calc(100vh - 32px); overflow: auto; border-radius: 22px; background: var(--g-white); box-shadow: 0 40px 100px rgba(0,0,0,.45); outline: 0; animation: g-pop-in 300ms cubic-bezier(.2,.9,.3,1.2); }
+@keyframes g-pop-in { from { opacity: 0; transform: translateY(18px) scale(.96); } to { opacity: 1; transform: none; } }
+.g-pop__close { position: absolute; z-index: 2; inset-block-start: 12px; inset-inline-end: 12px; display: grid; width: 38px; height: 38px; place-items: center; border: 0; border-radius: 50%; color: var(--g-ink); background: rgba(255,255,255,.9); cursor: pointer; }
+.g-pop__close:hover { background: var(--g-smoke); }
+.g-pop__close svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; }
+.g-pop__visual { position: relative; display: grid; min-height: 280px; padding: 28px; place-items: center; background: radial-gradient(circle at 50% 40%, #ffffff, #dfe6fa 80%); }
+.g-pop__visual img { width: 100%; max-width: 300px; height: auto; filter: drop-shadow(0 16px 20px rgba(23,39,101,.3)); }
+.g-pop__badge { position: absolute; inset-block-end: 18px; inset-inline-start: 18px; display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 14px; color: #fff; background: var(--g-orange-dark); font-size: 12px; font-weight: 700; line-height: 1.25; max-width: 190px; }
+.g-pop__badge b { font-size: 30px; font-weight: 900; line-height: 1; }
+.g-pop__body { display: flex; flex-direction: column; gap: 14px; padding: 40px 36px 30px; }
+.g-pop__body h2 { margin: 0; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.18; }
+.g-erp[dir="rtl"] .g-pop__body h2 { line-height: 1.45; }
+.g-pop__pct { color: var(--g-orange-dark); font-weight: 900; }
+.g-pop__body > p { margin: 0; font-size: 15.5px; }
+.g-pop__actions { display: grid; gap: 10px; margin-top: 6px; }
+.g-pop__dismiss { align-self: center; padding: 6px; border: 0; color: var(--g-body); background: none; font-size: 13.5px; text-decoration: underline; cursor: pointer; }
+.g-pop__note { margin: 0 !important; color: #7a7f8a; font-size: 11.5px !important; line-height: 1.5; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .g-why-grid { grid-template-columns: repeat(2, 1fr); }
+  .g-trust-strip__inner { grid-template-columns: repeat(2, 1fr); }
+  .g-oracle-grid, .g-deploy-grid { grid-template-columns: 1fr; }
+  .g-process { grid-template-columns: repeat(2, 1fr); }
+  .g-hero__inner { grid-template-columns: minmax(0, 1fr) minmax(360px, .85fr); }
+}
+@media (max-width: 900px) {
+  .g-hero__inner { grid-template-columns: 1fr; }
+  .g-hero__visual { margin-inline: auto; }
+  .g-lead-card { width: min(620px, 100%); }
+  .g-modules { grid-template-columns: 1fr; padding: 16px; }
+  .g-tabs { grid-auto-flow: column; grid-auto-columns: max-content; overflow-x: auto; padding-bottom: 4px; }
+  .g-tab-panel { grid-template-columns: 1fr; min-height: 0; }
+  .g-testi, .g-case-grid { grid-template-columns: 1fr; }
+  .g-sticky { display: flex; }
+  .g-footer { padding-bottom: 92px; }
+  .g-pop__panel { grid-template-columns: 1fr; }
+  .g-pop__visual { display: none; }
+  .g-pop__body { padding: 44px 24px 24px; }
+}
+@media (max-width: 700px) {
+  .g-header__inner { min-height: 92px; }
+  .g-logo img { width: 150px; }
+  .g-section { padding: 56px 0; }
+  .g-hero { padding: 40px 0 56px; }
+  .g-why-grid, .g-process, .g-trust-strip__inner { grid-template-columns: 1fr; }
+  .g-testi__quote { padding: 28px 22px; }
+  .g-testi__results { padding: 24px 20px; }
+  .g-hero__visual { display: none; }
+  .g-final-cta { padding: 56px 0; }
+  .g-final-cta__inner .g-button { width: 100%; justify-content: center; }
+}
+@media (max-width: 430px) {
+  .g-logo img { width: 128px; }
+  .g-hero__ctas .g-button { width: 100%; justify-content: center; }
+}
+
+.g-roi-disclaimer { margin-top: 20px; }
+
+.g-hp { position: absolute !important; inset-inline-start: -9999px; width: 1px; height: 1px; opacity: 0; }</style>
+</head>
+<body style="margin:0">
+<!-- Guardia Systems Oracle ERP bilingual landing page body -->
+<div
+  id="guardia-oracle-erp"
+  class="g-erp"
+  lang="en"
+  dir="ltr"
+  data-savings-percent="20"
+  data-lead-api="/api/lead"
+  data-form-endpoint="/wp-json/contact-form-7/v1/contact-forms/1062/feedback"
+  data-form-id="1062"
+  data-form-version="6.1.6"
+  data-recaptcha-sitekey="6LcPJiQrAAAAAIc9WcqN6vJT_5aGb8G7XctaNXP5"
+>
+  <a class="g-skip-link" href="#g-main" data-en="Skip to main content" data-ar="انتقل إلى المحتوى الرئيسي">Skip to main content</a>
+
+  <header class="g-header" aria-label="Landing page navigation" data-en-aria="Landing page navigation" data-ar-aria="التنقل في صفحة الهبوط">
+    <div class="g-container g-header__inner">
+      <a class="g-logo" href="https://guardiasystems.com/" aria-label="Guardia Systems home" data-en-aria="Guardia Systems home" data-ar-aria="الصفحة الرئيسية لغواريديا سيستمز">
+        <img src="https://i0.wp.com/guardiasystems.com/wp-content/uploads/2024/10/guardia-logo-mg-light.png?resize=768%2C368&amp;ssl=1" width="300" height="143" alt="Guardia Systems — Engineered Innovation" fetchpriority="high">
+      </a>
+      <nav class="g-nav" aria-label="Page sections">
+        <a href="#g-why"><span data-en="Why Oracle" data-ar="لماذا Oracle">Why Oracle</span></a>
+        <a href="#g-modules"><span data-en="Modules" data-ar="الوحدات">Modules</span></a>
+        <a href="#g-roi"><span data-en="Savings" data-ar="التوفير">Savings</span></a>
+        <a href="#g-proof"><span data-en="Results" data-ar="النتائج">Results</span></a>
+        <a href="#g-faq"><span data-en="FAQ" data-ar="الأسئلة">FAQ</span></a>
+      </nav>
+      <div class="g-header__actions">
+        <div class="g-lang-switch" role="group" aria-label="Select language">
+          <button class="g-lang-switch__button is-active" type="button" data-language="en" aria-pressed="true">EN</button>
+          <button class="g-lang-switch__button" type="button" data-language="ar" aria-pressed="false">عربي</button>
+        </div>
+        <a class="g-button g-button--small g-button--orange" href="#g-consultation"><span data-en="Request a demo" data-ar="اطلب عرضاً توضيحياً">Request a demo</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="g-main">
+
+    <section class="g-hero" aria-labelledby="g-hero-title">
+      <div class="g-hero__grid" aria-hidden="true"></div>
+      <div class="g-hero__beam" aria-hidden="true"></div>
+      <div class="g-container g-hero__inner">
+        <div class="g-hero__content">
+          <p class="g-eyebrow g-eyebrow--light"><span class="g-eyebrow__dot" aria-hidden="true"></span><span data-en="Oracle’s leading partner in the Middle East" data-ar="الشريك الرائد لأوراكل في الشرق الأوسط">Oracle’s leading partner in the Middle East</span></p>
+          <h1 id="g-hero-title" data-en="Modern ERP for business agility &amp; continuous innovation." data-ar="نظام ERP حديث لمرونة الأعمال والابتكار المستمر.">Modern ERP for business agility &amp; continuous innovation.</h1>
+          <p class="g-hero__lead" data-en="Power the future of your business with intelligent automation, predictive insights &amp; continuous innovation." data-ar="مكّن مستقبل أعمالك بالأتمتة الذكية والرؤى التنبؤية والابتكار المستمر.">Power the future of your business with intelligent automation, predictive insights &amp; continuous innovation.</p>
+          <ul class="g-check-list" aria-label="Key benefits" data-en-aria="Key benefits" data-ar-aria="الفوائد الرئيسية"><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="AI-powered automation" data-ar="أتمتة مدعومة بالذكاء الاصطناعي">AI-powered automation</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Real-time visibility" data-ar="رؤية فورية">Real-time visibility</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Lower operating costs" data-ar="تكاليف تشغيل أقل">Lower operating costs</span></li></ul>
+          <div class="g-hero__ctas">
+            <a class="g-button g-button--orange g-button--large" href="#g-consultation"><span data-en="Request a demo" data-ar="اطلب عرضاً توضيحياً">Request a demo</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+            <a class="g-button g-button--outline-light g-button--large" href="#g-roi"><span data-en="Estimate my savings" data-ar="قدّر وفوراتي">Estimate my savings</span></a>
+          </div>
+        </div>
+
+        <aside id="g-consultation" class="g-lead-card" aria-labelledby="g-form-title">
+          <div class="g-lead-card__accent" aria-hidden="true"></div>
+          <div class="g-lead-card__header">
+            <span class="g-form-kicker" data-en="Speak to an expert" data-ar="تحدّث إلى خبير">Speak to an expert</span>
+            <h2 id="g-form-title" data-en="Request an Oracle ERP demo" data-ar="اطلب عرضاً توضيحياً لـ Oracle ERP">Request an Oracle ERP demo</h2>
+          </div>
+          <div class="g-form-progress" aria-label="Form progress" data-en-aria="Form progress" data-ar-aria="تقدم النموذج">
+            <div class="g-form-progress__track"><span></span></div>
+            <p><span data-en="Step" data-ar="الخطوة">Step</span> <strong data-progress-step>1</strong> <span data-en="of" data-ar="من">of</span> 2</p>
+          </div>
+          <form class="g-lead-form" action="https://guardiasystems.com/contact-us-new/" method="post" data-lead-form>
+            <div class="g-form-step is-active" data-form-step="1">
+              <div class="g-field">
+                <label for="g-full-name" data-en="Full name" data-ar="الاسم الكامل">Full name</label>
+                <input id="g-full-name" name="full_name" type="text" autocomplete="name" required maxlength="100" placeholder="Your name" data-en-placeholder="Your name" data-ar-placeholder="اسمك">
+              </div>
+              <div class="g-field">
+                <label for="g-email" data-en="Work email" data-ar="البريد الإلكتروني للعمل">Work email</label>
+                <input id="g-email" name="email" type="email" autocomplete="email" required maxlength="160" placeholder="name@company.com" data-en-placeholder="name@company.com" data-ar-placeholder="name@company.com">
+              </div>
+              <div class="g-field">
+                <label for="g-phone" data-en="Phone / WhatsApp" data-ar="الهاتف / واتساب">Phone / WhatsApp</label>
+                <input id="g-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="40" placeholder="+961 / +964" data-en-placeholder="+961 / +964" data-ar-placeholder="+961 / +964">
+              </div>
+              <button class="g-button g-button--primary g-button--block" type="button" data-next-step>
+                <span data-en="Continue" data-ar="متابعة">Continue</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>
+              </button>
+            </div>
+
+            <div class="g-form-step" data-form-step="2" hidden>
+              <div class="g-field-row">
+                <div class="g-field">
+                  <label for="g-company" data-en="Company" data-ar="الشركة">Company</label>
+                  <input id="g-company" name="company" type="text" autocomplete="organization" required maxlength="120" placeholder="Company name" data-en-placeholder="Company name" data-ar-placeholder="اسم الشركة">
+                </div>
+                <div class="g-field">
+                  <label for="g-country" data-en="Country" data-ar="الدولة">Country</label>
+                  <select id="g-country" name="country" required>
+                    <option value="" data-en="Select" data-ar="اختر">Select</option>
+                    <option value="Lebanon" data-en="Lebanon" data-ar="لبنان">Lebanon</option>
+                    <option value="Iraq" data-en="Iraq" data-ar="العراق">Iraq</option>
+                    <option value="Saudi Arabia" data-en="Saudi Arabia" data-ar="المملكة العربية السعودية">Saudi Arabia</option>
+                    <option value="Other" data-en="Other" data-ar="دولة أخرى">Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="g-field">
+                <label for="g-objective" data-en="Primary ERP objective" data-ar="الهدف الرئيسي من نظام ERP">Primary ERP objective</label>
+                <select id="g-objective" name="objective" required>
+                  <option value="" data-en="Choose the closest fit" data-ar="اختر الخيار الأقرب">Choose the closest fit</option>
+                  <option value="New Oracle ERP implementation" data-en="New Oracle ERP implementation" data-ar="تنفيذ Oracle ERP جديد">New Oracle ERP implementation</option>
+                  <option value="Legacy or on-premise migration" data-en="Migrate from a legacy or on-premise ERP" data-ar="الانتقال من نظام قديم أو محلي">Migrate from a legacy or on-premise ERP</option>
+                  <option value="Oracle ERP optimization" data-en="Optimize an existing Oracle ERP" data-ar="تحسين نظام Oracle ERP قائم">Optimize an existing Oracle ERP</option>
+                  <option value="Systems integration" data-en="Integrate Oracle with other systems" data-ar="ربط Oracle بأنظمة أخرى">Integrate Oracle with other systems</option>
+                  <option value="ERP assessment" data-en="I need an ERP readiness assessment" data-ar="أحتاج إلى تقييم الجاهزية لنظام ERP">I need an ERP readiness assessment</option>
+                </select>
+              </div>
+              <div class="g-field">
+                <label for="g-message" data-en="Anything we should know? (optional)" data-ar="هل هناك تفاصيل إضافية؟ (اختياري)">Anything we should know? (optional)</label>
+                <textarea id="g-message" name="message" rows="2" maxlength="1000" placeholder="Current system, timeline…" data-en-placeholder="Current system, timeline…" data-ar-placeholder="النظام الحالي، الجدول الزمني…"></textarea>
+              </div>
+              <label class="g-consent" for="g-consent">
+                <input id="g-consent" name="consent" type="checkbox" required>
+                <span>
+                  <span data-en="I agree that Guardia Systems may contact me about this request. Read the" data-ar="أوافق على أن تتواصل معي غواريديا سيستمز بخصوص هذا الطلب. اقرأ">I agree that Guardia Systems may contact me about this request. Read the</span>
+                  <a href="https://guardiasystems.com/privacy-policy/" target="_blank" rel="noopener" data-en="privacy policy" data-ar="سياسة الخصوصية">privacy policy</a>.
+                </span>
+              </label>
+              <div class="g-form-actions">
+                <button class="g-button g-button--ghost" type="button" data-prev-step>
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M19 12H5m5 5-5-5 5-5"/></svg><span data-en="Back" data-ar="رجوع">Back</span>
+                </button>
+                <button class="g-button g-button--orange g-button--submit" type="submit" data-submit-button>
+                  <span data-submit-label data-en="Request a demo" data-ar="اطلب عرضاً توضيحياً">Request a demo</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <input class="g-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="g-form-status" role="status" aria-live="polite" data-form-status></div>
+            <noscript>
+              <p class="g-noscript">JavaScript is required for this form. Please use the <a href="https://guardiasystems.com/contact-us-new/">Guardia Systems contact page</a>.</p>
+            </noscript>
+          </form>
+          <p class="g-form-note"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg><span data-en="Your information is used only to respond to this enquiry." data-ar="تُستخدم معلوماتك فقط للرد على هذا الاستفسار.">Your information is used only to respond to this enquiry.</span></p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="g-trust-strip" aria-label="Delivery credentials" data-en-aria="Delivery credentials" data-ar-aria="مؤهلات التنفيذ">
+      <ul class="g-container g-trust-strip__inner"><li><strong dir="ltr">30+</strong><span data-en="years of regional expertise" data-ar="عاماً من الخبرة الإقليمية">years of regional expertise</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></svg><span data-en="Oracle’s leading partner in the Middle East" data-ar="الشريك الرائد لأوراكل في الشرق الأوسط">Oracle’s leading partner in the Middle East</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg><span data-en="ISO 9001 · 14001 · 45001 certified" data-ar="حاصلة على شهادات ISO 9001 · 14001 · 45001">ISO 9001 · 14001 · 45001 certified</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span data-en="Beirut · Baghdad · KSA" data-ar="بيروت · بغداد · السعودية">Beirut · Baghdad · KSA</span></li></ul>
+    </section>
+
+    <section id="g-why" class="g-section g-section--why" aria-labelledby="g-why-title">
+      <div class="g-container">
+        <div class="g-section-heading g-section-heading--center">
+          <p class="g-eyebrow"><span class="g-eyebrow__line" aria-hidden="true"></span><span data-en="Oracle ERP" data-ar="Oracle ERP">Oracle ERP</span></p>
+          <h2 id="g-why-title" data-en="Why Oracle ERP?" data-ar="لماذا Oracle ERP؟">Why Oracle ERP?</h2>
+        </div>
+        <div class="g-why-grid"><article class="g-why-card">
+            <span class="g-why-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></span>
+            <h3 data-en="AI-Powered Automation" data-ar="الأتمتة المدعومة بالذكاء الاصطناعي">AI-Powered Automation</h3>
+            <p data-en="Let AI handle routine work while your teams focus on growth." data-ar="دع الذكاء الاصطناعي يتولى المهام الروتينية بينما تركّز فرقك على النمو.">Let AI handle routine work while your teams focus on growth.</p>
+          </article><article class="g-why-card">
+            <span class="g-why-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></span>
+            <h3 data-en="Real-Time Visibility" data-ar="رؤية فورية">Real-Time Visibility</h3>
+            <p data-en="Gain a complete, real-time view of your business to make faster, smarter decisions." data-ar="احصل على صورة كاملة وفورية لأعمالك لاتخاذ قرارات أسرع وأذكى.">Gain a complete, real-time view of your business to make faster, smarter decisions.</p>
+          </article><article class="g-why-card">
+            <span class="g-why-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></svg></span>
+            <h3 data-en="Predictive Decision-Making" data-ar="قرارات تنبؤية">Predictive Decision-Making</h3>
+            <p data-en="Understand future trends, not just past performance." data-ar="افهم اتجاهات المستقبل، لا الأداء السابق فقط.">Understand future trends, not just past performance.</p>
+          </article><article class="g-why-card">
+            <span class="g-why-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span>
+            <h3 data-en="Enhanced Collaboration" data-ar="تعاون أقوى">Enhanced Collaboration</h3>
+            <p data-en="Connect teams and workflows on a single platform to improve efficiency and alignment." data-ar="اربط الفرق وسير العمل على منصة واحدة لرفع الكفاءة والتناغم.">Connect teams and workflows on a single platform to improve efficiency and alignment.</p>
+          </article><article class="g-why-card">
+            <span class="g-why-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+            <h3 data-en="Scalability &amp; Flexibility" data-ar="قابلية التوسع والمرونة">Scalability &amp; Flexibility</h3>
+            <p data-en="Scale your ERP seamlessly as your business grows and evolves." data-ar="وسّع نظام ERP بسلاسة مع نمو أعمالك وتطورها.">Scale your ERP seamlessly as your business grows and evolves.</p>
+          </article><article class="g-why-card">
+            <span class="g-why-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+            <h3 data-en="Cost Optimization" data-ar="تحسين التكاليف">Cost Optimization</h3>
+            <p data-en="Reduce operational costs through smarter resource utilization and process efficiency." data-ar="خفّض التكاليف التشغيلية عبر استخدام أذكى للموارد وكفاءة أعلى في العمليات.">Reduce operational costs through smarter resource utilization and process efficiency.</p>
+          </article><article class="g-why-card">
+            <span class="g-why-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></span>
+            <h3 data-en="Employee &amp; Customer Satisfaction" data-ar="رضا الموظفين والعملاء">Employee &amp; Customer Satisfaction</h3>
+            <p data-en="Enhance employee experiences to deliver better service and stronger customer satisfaction." data-ar="حسّن تجربة الموظفين لتقديم خدمة أفضل ورضا أعلى للعملاء.">Enhance employee experiences to deliver better service and stronger customer satisfaction.</p>
+          </article><article class="g-why-card">
+            <span class="g-why-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <h3 data-en="Compliance &amp; Control" data-ar="الامتثال والتحكم">Compliance &amp; Control</h3>
+            <p data-en="Maintain regulatory compliance and gain greater visibility and control across operations." data-ar="حافظ على الامتثال التنظيمي واكتسب رؤية وتحكماً أكبر عبر العمليات.">Maintain regulatory compliance and gain greater visibility and control across operations.</p>
+          </article></div>
+      </div>
+    </section>
+
+    <section id="g-modules" class="g-section g-section--modules" aria-labelledby="g-modules-title">
+      <div class="g-container">
+        <div class="g-section-heading g-section-heading--center">
+          <p class="g-eyebrow"><span class="g-eyebrow__line" aria-hidden="true"></span><span data-en="Modules" data-ar="الوحدات">Modules</span></p>
+          <h2 id="g-modules-title" data-en="Choose the modules your business needs" data-ar="اختر الوحدات التي يحتاجها عملك">Choose the modules your business needs</h2>
+        </div>
+        <div class="g-modules">
+          <div class="g-tabs" role="tablist" aria-label="Oracle ERP modules" data-en-aria="Oracle ERP modules" data-ar-aria="وحدات Oracle ERP"><button class="g-tab is-active" type="button" role="tab" id="g-tab-0" aria-selected="true" aria-controls="g-panel-0" data-tab="0"><span data-en="Financial Management" data-ar="الإدارة المالية">Financial Management</span></button><button class="g-tab" type="button" role="tab" id="g-tab-1" aria-selected="false" aria-controls="g-panel-1" data-tab="1" tabindex="-1"><span data-en="Human Capital (HCM)" data-ar="رأس المال البشري (HCM)">Human Capital (HCM)</span></button><button class="g-tab" type="button" role="tab" id="g-tab-2" aria-selected="false" aria-controls="g-panel-2" data-tab="2" tabindex="-1"><span data-en="Supply Chain (SCM)" data-ar="سلاسل الإمداد (SCM)">Supply Chain (SCM)</span></button><button class="g-tab" type="button" role="tab" id="g-tab-3" aria-selected="false" aria-controls="g-panel-3" data-tab="3" tabindex="-1"><span data-en="Customer Experience (CX)" data-ar="تجربة العملاء (CX)">Customer Experience (CX)</span></button></div>
+          <div class="g-tab-panels"><div class="g-tab-panel" role="tabpanel" id="g-panel-0" aria-labelledby="g-tab-0">
+            <ul class="g-module-list"><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Budgeting, planning, and forecasting" data-ar="الميزانيات والتخطيط والتنبؤ">Budgeting, planning, and forecasting</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Financial reporting and analytics" data-ar="التقارير المالية والتحليلات">Financial reporting and analytics</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Faster, data-driven decision-making" data-ar="قرارات أسرع مبنية على البيانات">Faster, data-driven decision-making</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Regulatory compliance and audit readiness" data-ar="الامتثال التنظيمي والجاهزية للتدقيق">Regulatory compliance and audit readiness</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Cost control and profitability analysis" data-ar="ضبط التكاليف وتحليل الربحية">Cost control and profitability analysis</span></li></ul>
+            <div class="g-module-visual"><img src="https://guardiasystems.com/wp-content/uploads/2026/08/Oracle-ERP-2.png" alt="Oracle Financial Management dashboard" loading="lazy" width="520" height="420"></div>
+          </div><div class="g-tab-panel" role="tabpanel" id="g-panel-1" aria-labelledby="g-tab-1" hidden>
+            <ul class="g-module-list"><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Talent acquisition and recruitment" data-ar="استقطاب المواهب والتوظيف">Talent acquisition and recruitment</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Performance and goal management" data-ar="إدارة الأداء والأهداف">Performance and goal management</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Learning and development" data-ar="التعلّم والتطوير">Learning and development</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Employee onboarding" data-ar="تهيئة الموظفين الجدد">Employee onboarding</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Payroll and benefits administration" data-ar="إدارة الرواتب والمزايا">Payroll and benefits administration</span></li></ul>
+            <div class="g-module-visual"><img src="https://guardiasystems.com/wp-content/uploads/2026/07/PICTURE-3-1.jpg" alt="AI-driven ERP illustration" loading="lazy" width="520" height="420"></div>
+          </div><div class="g-tab-panel" role="tabpanel" id="g-panel-2" aria-labelledby="g-tab-2" hidden>
+            <ul class="g-module-list"><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Demand planning and forecasting" data-ar="تخطيط الطلب والتنبؤ">Demand planning and forecasting</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Manufacturing operations" data-ar="العمليات التصنيعية">Manufacturing operations</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Logistics and transportation management" data-ar="إدارة الخدمات اللوجستية والنقل">Logistics and transportation management</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Procurement, inventory and warehouse management" data-ar="المشتريات والمخزون وإدارة المستودعات">Procurement, inventory and warehouse management</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="AI-driven planning and operational insights" data-ar="التخطيط والرؤى التشغيلية المدعومة بالذكاء الاصطناعي">AI-driven planning and operational insights</span></li></ul>
+            <div class="g-module-visual"><img src="https://guardiasystems.com/wp-content/uploads/2026/08/Oracle-ERP-3.png" alt="Cloud ERP platform illustration" loading="lazy" width="520" height="420"></div>
+          </div><div class="g-tab-panel" role="tabpanel" id="g-panel-3" aria-labelledby="g-tab-3" hidden>
+            <ul class="g-module-list"><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Sales automation and opportunity management" data-ar="أتمتة المبيعات وإدارة الفرص">Sales automation and opportunity management</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Customer service and support management" data-ar="خدمة العملاء وإدارة الدعم">Customer service and support management</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Marketing automation and campaign management" data-ar="أتمتة التسويق وإدارة الحملات">Marketing automation and campaign management</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Omnichannel customer engagement" data-ar="التفاعل مع العملاء عبر جميع القنوات">Omnichannel customer engagement</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span data-en="Customer loyalty and retention programs" data-ar="برامج ولاء العملاء والاحتفاظ بهم">Customer loyalty and retention programs</span></li></ul>
+            <div class="g-module-visual"><img src="https://guardiasystems.com/wp-content/uploads/2026/08/Oracle-ERP-1.png" alt="Connected ERP modules illustration" loading="lazy" width="520" height="420"></div>
+          </div></div>
+        </div>
+        <div class="g-deploy">
+          <h3 class="g-deploy__title" data-en="Deployment models" data-ar="نماذج النشر">Deployment models</h3>
+          <div class="g-deploy-grid"><article class="g-deploy-card">
+            <span class="g-deploy-card__tag"><span data-en="Cloud" data-ar="سحابي">Cloud</span></span>
+            <h3>Oracle Fusion</h3>
+            <p data-en="A future-ready platform connecting people, processes, and data." data-ar="منصة جاهزة للمستقبل تربط الأفراد والعمليات والبيانات.">A future-ready platform connecting people, processes, and data.</p>
+          </article><article class="g-deploy-card">
+            <span class="g-deploy-card__tag"><span data-en="Cloud" data-ar="سحابي">Cloud</span></span>
+            <h3>Oracle NetSuite</h3>
+            <p data-en="Cloud business management for growing organizations." data-ar="إدارة أعمال سحابية للمؤسسات النامية.">Cloud business management for growing organizations.</p>
+          </article><article class="g-deploy-card">
+            <span class="g-deploy-card__tag"><span data-en="On-premise" data-ar="محلي">On-premise</span></span>
+            <h3>Oracle E-Business Suite</h3>
+            <p data-en="A stable, scalable foundation for control and continuity." data-ar="أساس مستقر وقابل للتوسع يمنحك التحكم واستمرارية الأعمال.">A stable, scalable foundation for control and continuity.</p>
+          </article></div>
+        </div>
+        <div class="g-section-cta">
+          <a class="g-button g-button--primary" href="#g-consultation"><span data-en="Speak to an expert" data-ar="تحدّث إلى خبير">Speak to an expert</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="g-roi" class="g-section g-section--roi" aria-labelledby="g-roi-title">
+      <div class="g-container">
+        <div class="g-section-heading g-section-heading--center">
+          <p class="g-eyebrow"><span class="g-eyebrow__line" aria-hidden="true"></span><span data-en="Savings estimator" data-ar="حاسبة التوفير">Savings estimator</span></p>
+          <h2 id="g-roi-title" data-en="See what Oracle ERP could save you" data-ar="اكتشف كم يمكن أن يوفّر لك Oracle ERP">See what Oracle ERP could save you</h2>
+          <p data-en="Enter your numbers for a quick, illustrative estimate." data-ar="أدخل أرقامك للحصول على تقدير توضيحي سريع.">Enter your numbers for a quick, illustrative estimate.</p>
+        </div>
+        <div class="g-roi-calculator" data-roi-calculator>
+          <div class="g-roi-calculator__input">
+            <div class="g-roi-calculator__heading">
+              <div>
+                <span class="g-roi-calculator__kicker" data-en="Illustrative calculator" data-ar="حاسبة تقديرية">Illustrative calculator</span>
+                <h3 data-en="Estimate your annual value" data-ar="قدّر قيمتك السنوية">Estimate your annual value</h3>
+              </div>
+              <div class="g-field g-roi-currency">
+                <label for="g-roi-currency" data-en="Currency" data-ar="العملة">Currency</label>
+                <select id="g-roi-currency" data-roi-currency>
+                  <option value="USD">USD</option>
+                  <option value="LBP">LBP</option>
+                  <option value="IQD">IQD</option>
+                  <option value="SAR">SAR</option>
+                </select>
+              </div>
+            </div>
+            <div class="g-roi-fields">
+              <div class="g-field">
+                <label for="g-roi-tech" data-en="Annual ERP, infrastructure and support cost" data-ar="التكلفة السنوية لنظام ERP والبنية التحتية والدعم">Annual ERP, infrastructure and support cost</label>
+                <input id="g-roi-tech" type="number" min="0" step="1000" inputmode="decimal" value="300000" data-roi-tech>
+              </div>
+              <div class="g-field">
+                <label for="g-roi-manual" data-en="Annual value of manual finance &amp; procurement work" data-ar="القيمة السنوية للأعمال اليدوية في المالية والمشتريات">Annual value of manual finance &amp; procurement work</label>
+                <input id="g-roi-manual" type="number" min="0" step="1000" inputmode="decimal" value="250000" data-roi-manual>
+              </div>
+              <div class="g-field">
+                <label for="g-roi-spend" data-en="Addressable annual procurement spend" data-ar="الإنفاق السنوي القابل للتحسين في المشتريات">Addressable annual procurement spend</label>
+                <input id="g-roi-spend" type="number" min="0" step="1000" inputmode="decimal" value="5000000" data-roi-spend>
+              </div>
+            </div>
+            <details class="g-roi-assumptions">
+              <summary><span data-en="Adjust the illustrative assumptions" data-ar="عدّل الافتراضات التقديرية">Adjust the illustrative assumptions</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+              <div class="g-roi-assumptions__grid">
+                <div class="g-field">
+                  <label for="g-roi-tech-rate" data-en="Technology run-cost reduction" data-ar="خفض تكلفة تشغيل التقنية">Technology run-cost reduction</label>
+                  <div class="g-percent-field"><input id="g-roi-tech-rate" type="number" min="0" max="100" step="1" value="10" data-roi-tech-rate><span aria-hidden="true">%</span></div>
+                </div>
+                <div class="g-field">
+                  <label for="g-roi-manual-rate" data-en="Team capacity regained" data-ar="الوقت المستعاد لفرق العمل">Team capacity regained</label>
+                  <div class="g-percent-field"><input id="g-roi-manual-rate" type="number" min="0" max="100" step="1" value="15" data-roi-manual-rate><span aria-hidden="true">%</span></div>
+                </div>
+                <div class="g-field">
+                  <label for="g-roi-spend-rate" data-en="Procurement improvement" data-ar="تحسين المشتريات">Procurement improvement</label>
+                  <div class="g-percent-field"><input id="g-roi-spend-rate" type="number" min="0" max="100" step="0.1" value="1" data-roi-spend-rate><span aria-hidden="true">%</span></div>
+                </div>
+              </div>
+            </details>
+            <div class="g-roi-calculator__actions">
+              <button class="g-button g-button--primary" type="button" data-roi-example data-en="Use illustrative example" data-ar="استخدم المثال التقديري">Use illustrative example</button>
+              <button class="g-button g-button--ghost" type="button" data-roi-clear data-en="Clear" data-ar="مسح">Clear</button>
+            </div>
+          </div>
+          <div class="g-roi-calculator__result" aria-live="polite" aria-atomic="true">
+            <span class="g-roi-result__label" data-en="Potential annual gross value" data-ar="القيمة الإجمالية السنوية المحتملة">Potential annual gross value</span>
+            <strong data-roi-annual>USD 117,500</strong>
+            <p data-en="before implementation and ongoing Oracle costs" data-ar="قبل تكاليف التنفيذ والتكاليف المستمرة لخدمات Oracle">before implementation and ongoing Oracle costs</p>
+            <dl class="g-roi-breakdown">
+              <div><dt data-en="Technology cost reduction" data-ar="خفض تكلفة التقنية">Technology cost reduction</dt><dd data-roi-tech-result>USD 30,000</dd></div>
+              <div><dt data-en="Capacity value" data-ar="قيمة الوقت المستعاد">Capacity value</dt><dd data-roi-manual-result>USD 37,500</dd></div>
+              <div><dt data-en="Spend improvement" data-ar="تحسين الإنفاق">Spend improvement</dt><dd data-roi-spend-result>USD 50,000</dd></div>
+              <div class="g-roi-breakdown__total"><dt data-en="Three-year gross value" data-ar="القيمة الإجمالية لثلاث سنوات">Three-year gross value</dt><dd data-roi-three-year>USD 352,500</dd></div>
+            </dl>
+            <a class="g-button g-button--orange g-button--block" href="#g-consultation" data-roi-cta data-en="Discuss this estimate" data-ar="ناقش هذا التقدير">Discuss this estimate</a>
+          </div>
+        </div>
+        <p class="g-roi-disclaimer" data-en="Planning aid only, not a quote or guarantee. Excludes Oracle subscriptions and licenses, implementation, integrations, data migration, change management, tax and financing. Regained capacity is not automatically cash savings." data-ar="أداة تخطيط فقط وليست عرض سعر أو ضماناً. لا تشمل اشتراكات Oracle وتراخيصها، ولا التنفيذ، ولا التكامل، ولا ترحيل البيانات، ولا إدارة التغيير، ولا الضرائب والتمويل. الوقت المستعاد لا يعني بالضرورة وفورات نقدية.">Planning aid only, not a quote or guarantee. Excludes Oracle subscriptions and licenses, implementation, integrations, data migration, change management, tax and financing. Regained capacity is not automatically cash savings.</p>
+      </div>
+    </section>
+
+    <section id="g-proof" class="g-section g-section--proof" aria-labelledby="g-proof-title">
+      <div class="g-container">
+        <div class="g-section-heading g-section-heading--center">
+          <p class="g-eyebrow"><span class="g-eyebrow__line" aria-hidden="true"></span><span data-en="Proven in the region" data-ar="نتائج مثبتة في المنطقة">Proven in the region</span></p>
+          <h2 id="g-proof-title" data-en="Trusted by banks, hospitals and enterprises" data-ar="موثوقة لدى المصارف والمستشفيات والمؤسسات">Trusted by banks, hospitals and enterprises</h2>
+        </div>
+
+        <div class="g-testi">
+          <figure class="g-testi__quote">
+            <svg class="g-testi__mark" aria-hidden="true" viewBox="0 0 24 24"><path d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6a4 4 0 0 1-4 4M20 11h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6a4 4 0 0 1-4 4"/></svg>
+            <blockquote>
+              <p data-en="Guardia Systems worked shoulder to shoulder with us. We enjoyed the collaboration, their local presence, and the quality of their engineers. They are a certified Oracle partner in Iraq and well versed in the financial services sector." data-ar="عملت غواريديا سيستمز معنا جنباً إلى جنب. استمتعنا بالتعاون وبحضورها المحلي وبجودة مهندسيها. فهي شريك معتمد لدى Oracle في العراق وعلى دراية واسعة بقطاع الخدمات المالية.">Guardia Systems worked shoulder to shoulder with us. We enjoyed the collaboration, their local presence, and the quality of their engineers. They are a certified Oracle partner in Iraq and well versed in the financial services sector.</p>
+            </blockquote>
+            <figcaption>
+              <span class="g-avatar" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-7 10 7Z"/></svg></span>
+              <span><strong><span data-en="Central Bank of Iraq" data-ar="البنك المركزي العراقي">Central Bank of Iraq</span></strong><span data-en="As published in Guardia’s case study" data-ar="كما ورد في دراسة حالة غواريديا">As published in Guardia’s case study</span></span>
+            </figcaption>
+          </figure>
+          <div class="g-testi__results">
+            <span class="g-testi__label" data-en="Reported results" data-ar="النتائج المعلنة">Reported results</span>
+            <div class="g-testi__stats"><div><strong>40%</strong><span data-en="lower hardware &amp; software costs" data-ar="خفض في تكاليف الأجهزة والبرمجيات">lower hardware &amp; software costs</span></div><div><strong>40%</strong><span data-en="lower ongoing operating expenses" data-ar="خفض في النفقات التشغيلية المستمرة">lower ongoing operating expenses</span></div><div><strong>50%</strong><span data-en="less reporting time" data-ar="وقت أقل لإعداد التقارير">less reporting time</span></div></div>
+            <a class="g-source-link" href="https://guardiasystems.com/guardia-systems-successfully-implemented-oracle-databases-in-the-central-bank-of-iraq/" target="_blank" rel="noopener"><span data-en="Read the case study" data-ar="اقرأ دراسة الحالة">Read the case study</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+          </div>
+        </div>
+
+        <div class="g-case-grid">
+          <article class="g-case-card">
+            <span class="g-avatar" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-7 10 7Z"/></svg></span>
+            <div>
+              <span class="g-proof-card__type"><span data-en="Core banking · Iraq" data-ar="نظام مصرفي أساسي · العراق">Core banking · Iraq</span></span>
+              <h4><span data-en="Al Rafidain Bank" data-ar="مصرف الرافدين">Al Rafidain Bank</span></h4>
+              <strong><span data-en="Core banking for up to 2 million accounts" data-ar="نظام مصرفي أساسي لما يصل إلى مليوني حساب">Core banking for up to 2 million accounts</span></strong>
+              <a class="g-source-link" href="https://guardiasystems.com/project/al-rafidain-bank/" target="_blank" rel="noopener"><span data-en="Read the case study" data-ar="اقرأ دراسة الحالة">Read the case study</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+            </div>
+          </article>
+          <article class="g-case-card">
+            <span class="g-avatar" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span>
+            <div>
+              <span class="g-proof-card__type"><span data-en="Healthcare · Lebanon" data-ar="الرعاية الصحية · لبنان">Healthcare · Lebanon</span></span>
+              <h4><span data-en="Monla Hospital" data-ar="مستشفى المنلا">Monla Hospital</span></h4>
+              <strong><span data-en="An end-to-end digital patient journey" data-ar="رحلة مريض رقمية متكاملة">An end-to-end digital patient journey</span></strong>
+              <a class="g-source-link" href="https://guardiasystems.com/hims-implementation-at-monla-hospital/" target="_blank" rel="noopener"><span data-en="Read the case study" data-ar="اقرأ دراسة الحالة">Read the case study</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+            </div>
+          </article>
+        </div>
+        <p class="g-proof-note" data-en="Guardia cases span Oracle database, core banking and healthcare platforms." data-ar="تشمل مشاريع غواريديا منصات قواعد بيانات Oracle والأنظمة المصرفية والرعاية الصحية.">Guardia cases span Oracle database, core banking and healthcare platforms.</p>
+
+        <div class="g-oracle-block">
+          <div class="g-oracle-block__head">
+            <span class="g-proof-badge"><span data-en="Published by Oracle" data-ar="منشورة من Oracle">Published by Oracle</span></span>
+            <p data-en="Global Oracle ERP customer outcomes. Not Guardia projects; results vary." data-ar="نتائج عملاء Oracle ERP عالمياً. ليست مشاريع لغواريديا، والنتائج تختلف.">Global Oracle ERP customer outcomes. Not Guardia projects; results vary.</p>
+          </div>
+          <div class="g-oracle-grid"><article class="g-oracle-card">
+            <span class="g-proof-card__type"><span data-en="Automotive manufacturing" data-ar="تصنيع السيارات">Automotive manufacturing</span></span>
+            <h4><span data-en="Sandhar" data-ar="Sandhar">Sandhar</span></h4>
+            <strong><span data-en="20%" data-ar="20%">20%</span></strong>
+            <p data-en="lower operating expenses after Oracle Cloud ERP and SCM" data-ar="خفض في المصروفات التشغيلية بعد تطبيق Oracle Cloud ERP وSCM">lower operating expenses after Oracle Cloud ERP and SCM</p>
+            <a class="g-source-link" href="https://www.oracle.com/customers/sandhar/" target="_blank" rel="noopener"><span data-en="Oracle customer story" data-ar="قصة العميل لدى Oracle">Oracle customer story</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+          </article><article class="g-oracle-card">
+            <span class="g-proof-card__type"><span data-en="Software" data-ar="البرمجيات">Software</span></span>
+            <h4><span data-en="Atlassian" data-ar="Atlassian">Atlassian</span></h4>
+            <strong><span data-en="7 → 3 days" data-ar="من 7 إلى 3 أيام">7 → 3 days</span></strong>
+            <p data-en="month-end close after Fusion Cloud ERP" data-ar="لإقفال نهاية الشهر بعد Fusion Cloud ERP">month-end close after Fusion Cloud ERP</p>
+            <a class="g-source-link" href="https://www.oracle.com/customers/atlassian/" target="_blank" rel="noopener"><span data-en="Oracle customer story" data-ar="قصة العميل لدى Oracle">Oracle customer story</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+          </article><article class="g-oracle-card">
+            <span class="g-proof-card__type"><span data-en="Mobility services" data-ar="خدمات التنقل">Mobility services</span></span>
+            <h4><span data-en="Avis Budget Group" data-ar="مجموعة Avis Budget">Avis Budget Group</span></h4>
+            <strong><span data-en="60%" data-ar="60%">60%</span></strong>
+            <p data-en="less time to close books and update forecasts" data-ar="وقت أقل لإقفال الدفاتر وتحديث التوقعات">less time to close books and update forecasts</p>
+            <a class="g-source-link" href="https://www.oracle.com/customers/avis-budget-group/" target="_blank" rel="noopener"><span data-en="Oracle customer story" data-ar="قصة العميل لدى Oracle">Oracle customer story</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+          </article></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="g-approach" class="g-section g-section--approach" aria-labelledby="g-approach-title">
+      <div class="g-container">
+        <div class="g-section-heading g-section-heading--center">
+          <p class="g-eyebrow"><span class="g-eyebrow__line" aria-hidden="true"></span><span data-en="Our approach" data-ar="منهجيتنا">Our approach</span></p>
+          <h2 id="g-approach-title" data-en="From planning to go-live and beyond" data-ar="من التخطيط إلى الإطلاق وما بعده">From planning to go-live and beyond</h2>
+        </div>
+        <ol class="g-process"><li><span>01</span><div><h3 data-en="Discover" data-ar="الاستكشاف">Discover</h3><p data-en="Objectives, processes, systems, data and risks." data-ar="الأهداف والعمليات والأنظمة والبيانات والمخاطر.">Objectives, processes, systems, data and risks.</p></div></li><li><span>02</span><div><h3 data-en="Design" data-ar="التصميم">Design</h3><p data-en="Target model, modules, integrations and rollout plan." data-ar="النموذج المستهدف والوحدات والتكامل وخطة الإطلاق.">Target model, modules, integrations and rollout plan.</p></div></li><li><span>03</span><div><h3 data-en="Deliver" data-ar="التنفيذ">Deliver</h3><p data-en="Configure, integrate, migrate, test and go live." data-ar="الإعداد والتكامل وترحيل البيانات والاختبار والإطلاق.">Configure, integrate, migrate, test and go live.</p></div></li><li><span>04</span><div><h3 data-en="Enable &amp; optimize" data-ar="التمكين والتحسين">Enable &amp; optimize</h3><p data-en="Train teams, stabilize and keep improving." data-ar="تدريب الفرق وتثبيت التشغيل والتحسين المستمر.">Train teams, stabilize and keep improving.</p></div></li></ol>
+      </div>
+    </section>
+
+    <section id="g-faq" class="g-section g-section--faq" aria-labelledby="g-faq-title">
+      <div class="g-container g-faq-layout">
+        <div class="g-faq-intro">
+          <p class="g-eyebrow"><span class="g-eyebrow__line" aria-hidden="true"></span><span data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</span></p>
+          <h2 id="g-faq-title" data-en="Questions before you begin" data-ar="أسئلة قبل أن تبدأ">Questions before you begin</h2>
+          <a class="g-button g-button--primary" href="#g-consultation"><span data-en="Ask an ERP specialist" data-ar="اسأل مختص ERP">Ask an ERP specialist</span></a>
+        </div>
+        <div class="g-accordion"><details>
+            <summary><span data-en="Where can Oracle ERP reduce operating cost?" data-ar="أين يمكن لنظام Oracle ERP خفض تكاليف التشغيل؟">Where can Oracle ERP reduce operating cost?</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <p data-en="From a simpler technology estate, less repetitive finance and procurement work, tighter spend control, and better visibility into cash and projects." data-ar="من خلال بيئة تقنية أبسط، وأعمال مالية ومشتريات أقل تكراراً، وضبط أدق للإنفاق، ورؤية أوضح للسيولة والمشاريع.">From a simpler technology estate, less repetitive finance and procurement work, tighter spend control, and better visibility into cash and projects.</p>
+          </details><details>
+            <summary><span data-en="What does an Oracle ERP implementation include?" data-ar="ماذا يشمل تنفيذ Oracle ERP؟">What does an Oracle ERP implementation include?</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <p data-en="Typically discovery, process design, configuration, integrations, data migration, testing, training, go-live and support, scoped to your operating model." data-ar="عادةً الاستكشاف وتصميم العمليات والإعداد والتكامل وترحيل البيانات والاختبار والتدريب والإطلاق والدعم، بحسب نموذج تشغيلك.">Typically discovery, process design, configuration, integrations, data migration, testing, training, go-live and support, scoped to your operating model.</p>
+          </details><details>
+            <summary><span data-en="Can Oracle ERP integrate with our existing systems?" data-ar="هل يمكن ربط Oracle ERP بأنظمتنا الحالية؟">Can Oracle ERP integrate with our existing systems?</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <p data-en="Yes. Integration is planned during solution design, including legacy and third-party systems." data-ar="نعم، يتم تخطيط التكامل أثناء تصميم الحل، بما في ذلك الأنظمة القديمة وأنظمة الجهات الخارجية.">Yes. Integration is planned during solution design, including legacy and third-party systems.</p>
+          </details><details>
+            <summary><span data-en="How long does an ERP implementation take?" data-ar="كم يستغرق تنفيذ نظام ERP؟">How long does an ERP implementation take?</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <p data-en="It depends on scope, entities, modules, integrations and data quality. A discovery phase sets a realistic timeline." data-ar="يعتمد على النطاق والكيانات والوحدات والتكامل وجودة البيانات. تحدد مرحلة الاستكشاف جدولاً زمنياً واقعياً.">It depends on scope, entities, modules, integrations and data quality. A discovery phase sets a realistic timeline.</p>
+          </details><details>
+            <summary><span data-en="Can we move from a legacy or on-premise ERP in phases?" data-ar="هل يمكن الانتقال من نظام قديم أو محلي على مراحل؟">Can we move from a legacy or on-premise ERP in phases?</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <p data-en="Often, yes. Phasing entities, modules and integrations balances continuity, risk and time to value." data-ar="غالباً نعم. تقسيم الكيانات والوحدات والتكامل على مراحل يوازن بين الاستمرارية والمخاطر وسرعة تحقيق القيمة.">Often, yes. Phasing entities, modules and integrations balances continuity, risk and time to value.</p>
+          </details></div>
+      </div>
+    </section>
+
+    <section id="g-contact" class="g-final-cta" aria-labelledby="g-final-title">
+      <img class="g-final-cta__bg" src="https://guardiasystems.com/wp-content/uploads/2026/09/2.jpg" alt="" loading="lazy" width="1360" height="770">
+      <div class="g-container g-final-cta__inner">
+        <div>
+          <p class="g-eyebrow g-eyebrow--light"><span class="g-eyebrow__line" aria-hidden="true"></span><span data-en="Speak to an expert" data-ar="تحدّث إلى خبير">Speak to an expert</span></p>
+          <h2 id="g-final-title" data-en="Let’s explore what comes next." data-ar="لنستكشف معاً ما هو التالي.">Let’s explore what comes next.</h2>
+          <ul class="g-contact-list">
+            <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span><span data-en="Baghdad" data-ar="بغداد">Baghdad</span>: <a href="tel:+9647818009955" dir="ltr">+964 781 800 9955</a></span></li>
+            <li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span><span data-en="Beirut" data-ar="بيروت">Beirut</span>: <a href="tel:+9611999760" dir="ltr">+961 1 999 760</a></span></li>
+            <li><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:info@guardiasystems.com" dir="ltr">info@guardiasystems.com</a></li>
+          </ul>
+        </div>
+        <a class="g-button g-button--orange g-button--large" href="#g-consultation"><span data-en="Request a demo" data-ar="اطلب عرضاً توضيحياً">Request a demo</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="g-footer">
+    <div class="g-container g-footer__inner">
+      <a class="g-logo g-logo--footer" href="https://guardiasystems.com/" aria-label="Guardia Systems home" data-en-aria="Guardia Systems home" data-ar-aria="الصفحة الرئيسية لغواريديا سيستمز">
+        <img src="https://i0.wp.com/guardiasystems.com/wp-content/uploads/2024/10/guardia-logo-mg-light.png?resize=768%2C368&amp;ssl=1" width="240" height="114" alt="Guardia Systems — Engineered Innovation" loading="lazy">
+      </a>
+      <div class="g-footer__meta">
+        <a href="https://guardiasystems.com/privacy-policy/" data-en="Privacy policy" data-ar="سياسة الخصوصية">Privacy policy</a>
+        <span>© <span data-current-year>2026</span> Guardia Systems</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="g-sticky" data-sticky aria-hidden="true">
+    <a class="g-button g-button--orange" href="#g-consultation" tabindex="-1"><span data-en="Request a demo" data-ar="اطلب عرضاً توضيحياً">Request a demo</span></a>
+    <a class="g-button g-button--outline-dark" href="#g-contact" tabindex="-1" aria-label="Call us" data-en-aria="Call us" data-ar-aria="اتصل بنا"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></a>
+  </div>
+
+  <div class="g-pop" data-pop hidden role="dialog" aria-modal="true" aria-labelledby="g-pop-title">
+    <div class="g-pop__backdrop" data-pop-close></div>
+    <div class="g-pop__panel" tabindex="-1">
+      <button class="g-pop__close" type="button" data-pop-close aria-label="Close" data-en-aria="Close" data-ar-aria="إغلاق"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      <div class="g-pop__visual">
+        <img src="https://guardiasystems.com/wp-content/uploads/2026/08/1.png" alt="" width="606" height="450" loading="lazy">
+        <span class="g-pop__badge"><b data-pct>20%</b><span data-en="lower ERP running costs*" data-ar="أقل في تكاليف تشغيل ERP*">lower ERP running costs*</span></span>
+      </div>
+      <div class="g-pop__body">
+        <span class="g-form-kicker" data-en="Before you go" data-ar="قبل أن تغادر">Before you go</span>
+        <h2 id="g-pop-title"><span data-en="Did you know you could save up to" data-ar="هل تعلم أنه يمكنك توفير ما يصل إلى">Did you know you could save up to</span> <span class="g-pop__pct" data-pct>20%</span> <span data-en="of your ERP spending with Oracle?" data-ar="من إنفاقك على نظام ERP مع Oracle؟">of your ERP spending with Oracle?</span></h2>
+        <p data-en="See what it could mean for your business in under a minute." data-ar="اكتشف ما يعنيه ذلك لعملك في أقل من دقيقة.">See what it could mean for your business in under a minute.</p>
+        <div class="g-pop__actions">
+          <a class="g-button g-button--orange g-button--block" href="#g-roi" data-pop-go><span data-en="Estimate my savings" data-ar="قدّر وفوراتي">Estimate my savings</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+          <a class="g-button g-button--ghost g-button--block" href="#g-consultation" data-pop-go><span data-en="Talk to an expert" data-ar="تحدّث إلى خبير">Talk to an expert</span></a>
+        </div>
+        <button class="g-pop__dismiss" type="button" data-pop-close><span data-en="No thanks, I’ll keep browsing" data-ar="لا شكراً، سأواصل التصفح">No thanks, I’ll keep browsing</span></button>
+        <p class="g-pop__note" data-en="*Based on Oracle-published customer results (e.g., Sandhar: 20% lower operating expenses). Outcomes vary and are not guaranteed." data-ar="*استناداً إلى نتائج عملاء نشرتها Oracle (مثل Sandhar: خفض بنسبة 20% في المصروفات التشغيلية). النتائج تختلف وغير مضمونة.">*Based on Oracle-published customer results (e.g., Sandhar: 20% lower operating expenses). Outcomes vary and are not guaranteed.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://guardiasystems.com/oracle-erp-implementation-lebanon-iraq/#service",
+      "name": "Oracle ERP Implementation",
+      "serviceType": "Oracle ERP consulting, implementation, integration, migration, enablement, and support",
+      "provider": {
+        "@type": "Organization",
+        "name": "Guardia Systems",
+        "url": "https://guardiasystems.com/",
+        "logo": "https://guardiasystems.com/wp-content/uploads/2024/10/guardia-logo-mg-light.png"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Lebanon"
+        },
+        {
+          "@type": "Country",
+          "name": "Iraq"
+        },
+        {
+          "@type": "Country",
+          "name": "Saudi Arabia"
+        }
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Enterprise organizations"
+      },
+      "inLanguage": [
+        "en",
+        "ar"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://guardiasystems.com/oracle-erp-implementation-lebanon-iraq/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where can Oracle ERP reduce operating cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "From a simpler technology estate, less repetitive finance and procurement work, tighter spend control, and better visibility into cash and projects."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does an Oracle ERP implementation include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typically discovery, process design, configuration, integrations, data migration, testing, training, go-live and support, scoped to your operating model."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Oracle ERP integrate with our existing systems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Integration is planned during solution design, including legacy and third-party systems."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does an ERP implementation take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on scope, entities, modules, integrations and data quality. A discovery phase sets a realistic timeline."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we move from a legacy or on-premise ERP in phases?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Often, yes. Phasing entities, modules and integrations balances continuity, risk and time to value."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script>(() => {
+  "use strict";
+
+  const root = document.getElementById("guardia-oracle-erp");
+  if (!root || root.dataset.initialized === "true") return;
+  root.dataset.initialized = "true";
+
+  const languageButtons = Array.from(root.querySelectorAll("[data-language]"));
+  const form = root.querySelector("[data-lead-form]");
+  const formSteps = Array.from(root.querySelectorAll("[data-form-step]"));
+  const nextButton = root.querySelector("[data-next-step]");
+  const previousButton = root.querySelector("[data-prev-step]");
+  const progress = root.querySelector(".g-form-progress");
+  const progressStep = root.querySelector("[data-progress-step]");
+  const submitButton = root.querySelector("[data-submit-button]");
+  const submitLabel = root.querySelector("[data-submit-label]");
+  const statusRegion = root.querySelector("[data-form-status]");
+  const currentYear = root.querySelector("[data-current-year]");
+  const roiCalculator = root.querySelector("[data-roi-calculator]");
+  const roiFields = {
+    currency: root.querySelector("[data-roi-currency]"),
+    tech: root.querySelector("[data-roi-tech]"),
+    manual: root.querySelector("[data-roi-manual]"),
+    spend: root.querySelector("[data-roi-spend]"),
+    techRate: root.querySelector("[data-roi-tech-rate]"),
+    manualRate: root.querySelector("[data-roi-manual-rate]"),
+    spendRate: root.querySelector("[data-roi-spend-rate]")
+  };
+  const roiOutputs = {
+    annual: root.querySelector("[data-roi-annual]"),
+    tech: root.querySelector("[data-roi-tech-result]"),
+    manual: root.querySelector("[data-roi-manual-result]"),
+    spend: root.querySelector("[data-roi-spend-result]"),
+    threeYear: root.querySelector("[data-roi-three-year]")
+  };
+  const roiExampleButton = root.querySelector("[data-roi-example]");
+  const roiClearButton = root.querySelector("[data-roi-clear]");
+  const roiCta = root.querySelector("[data-roi-cta]");
+  const liveHost = /(^|\.)guardiasystems\.com$/i.test(window.location.hostname);
+  const languageStorageKey = "guardia-erp-language";
+  let currentLanguage = "en";
+  let currentStep = 1;
+  let leadSubmitted = false;
+
+  const copy = {
+    en: {
+      loading: "Sending request…",
+      success: "Thank you. Your request has been sent to Guardia Systems.",
+      demo: "Demo mode: the form passed validation, but no lead was sent. It will use Guardia’s existing enquiry form when hosted on guardiasystems.com.",
+      error: "We could not send your request. Please try again or use Guardia Systems’ contact page.",
+      validation: "Please complete the highlighted field before continuing.",
+      contactLink: "Open contact page"
+    },
+    ar: {
+      loading: "جارٍ إرسال الطلب…",
+      success: "شكراً لك. تم إرسال طلبك إلى غواريديا سيستمز.",
+      demo: "وضع المعاينة: اجتاز النموذج التحقق، لكن لم يتم إرسال أي بيانات. عند استضافته على guardiasystems.com سيستخدم نموذج الاستفسارات الحالي لدى غواريديا.",
+      error: "تعذر إرسال طلبك. يرجى المحاولة مرة أخرى أو استخدام صفحة التواصل مع غواريديا سيستمز.",
+      validation: "يرجى إكمال الحقل المحدد قبل المتابعة.",
+      contactLink: "افتح صفحة التواصل"
+    }
+  };
+
+  function safeStorageGet(key) {
+    try {
+      return window.localStorage.getItem(key);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function safeStorageSet(key, value) {
+    try {
+      window.localStorage.setItem(key, value);
+    } catch (_) {
+      // Language persistence is helpful, not required.
+    }
+  }
+
+  function setLanguage(language, persist = true) {
+    currentLanguage = language === "ar" ? "ar" : "en";
+    const direction = currentLanguage === "ar" ? "rtl" : "ltr";
+
+    root.lang = currentLanguage;
+    root.dir = direction;
+
+    root.querySelectorAll("[data-en][data-ar]").forEach((element) => {
+      element.textContent = element.dataset[currentLanguage] || element.dataset.en;
+    });
+
+    root.querySelectorAll("[data-en-placeholder][data-ar-placeholder]").forEach((element) => {
+      element.placeholder = element.dataset[`${currentLanguage}Placeholder`] || element.dataset.enPlaceholder;
+    });
+
+    root.querySelectorAll("[data-en-alt][data-ar-alt]").forEach((element) => {
+      element.alt = element.dataset[`${currentLanguage}Alt`] || element.dataset.enAlt;
+    });
+
+    root.querySelectorAll("[data-en-aria][data-ar-aria]").forEach((element) => {
+      element.setAttribute("aria-label", element.dataset[`${currentLanguage}Aria`] || element.dataset.enAria);
+    });
+
+    languageButtons.forEach((button) => {
+      const active = button.dataset.language === currentLanguage;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+
+    const navigationLabel = currentLanguage === "ar" ? "أقسام الصفحة" : "Page sections";
+    const header = root.querySelector(".g-header");
+    const navigation = root.querySelector(".g-nav");
+    const languageGroup = root.querySelector(".g-lang-switch");
+    if (header) header.setAttribute("aria-label", currentLanguage === "ar" ? "التنقل في صفحة الهبوط" : "Landing page navigation");
+    if (navigation) navigation.setAttribute("aria-label", navigationLabel);
+    if (languageGroup) languageGroup.setAttribute("aria-label", currentLanguage === "ar" ? "اختر اللغة" : "Select language");
+
+    updateRoi();
+    if (persist) safeStorageSet(languageStorageKey, currentLanguage);
+    pushAnalytics("erp_language_change", { language: currentLanguage });
+  }
+
+  function pushAnalytics(event, properties = {}) {
+    if (!Array.isArray(window.dataLayer)) return;
+    window.dataLayer.push({ event, ...properties });
+  }
+
+  function showStep(stepNumber) {
+    currentStep = stepNumber === 2 ? 2 : 1;
+    formSteps.forEach((step) => {
+      const active = Number(step.dataset.formStep) === currentStep;
+      step.hidden = !active;
+      step.classList.toggle("is-active", active);
+    });
+    if (progress) progress.classList.toggle("is-complete", currentStep === 2);
+    if (progressStep) progressStep.textContent = String(currentStep);
+
+    const firstField = formSteps
+      .find((step) => Number(step.dataset.formStep) === currentStep)
+      ?.querySelector("input, select, textarea");
+    if (firstField && window.matchMedia("(max-width: 900px)").matches) {
+      window.setTimeout(() => firstField.focus({ preventScroll: true }), 220);
+    }
+  }
+
+  function setStatus(type, message, includeContactLink = false) {
+    if (!statusRegion) return;
+    statusRegion.className = `g-form-status${type ? ` is-${type}` : ""}`;
+    statusRegion.textContent = message || "";
+
+    if (includeContactLink) {
+      const separator = document.createTextNode(" ");
+      const link = document.createElement("a");
+      link.href = "https://guardiasystems.com/contact-us-new/";
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.textContent = copy[currentLanguage].contactLink;
+      link.style.textDecoration = "underline";
+      link.style.fontWeight = "800";
+      statusRegion.append(separator, link);
+    }
+  }
+
+  function fieldsForStep(stepNumber) {
+    const step = formSteps.find((item) => Number(item.dataset.formStep) === stepNumber);
+    return step ? Array.from(step.querySelectorAll("input, select, textarea")) : [];
+  }
+
+  function validateStep(stepNumber) {
+    const fields = fieldsForStep(stepNumber);
+    const firstInvalid = fields.find((field) => !field.checkValidity());
+
+    fields.forEach((field) => {
+      const invalid = !field.checkValidity();
+      field.setAttribute("aria-invalid", String(invalid));
+    });
+
+    if (firstInvalid) {
+      setStatus("error", copy[currentLanguage].validation);
+      firstInvalid.focus();
+      firstInvalid.reportValidity();
+      return false;
+    }
+
+    setStatus("", "");
+    return true;
+  }
+
+  function getAttribution() {
+    const params = new URLSearchParams(window.location.search);
+    const keys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "gclid"];
+    const values = {};
+    keys.forEach((key) => {
+      const value = params.get(key);
+      if (value) values[key] = value.slice(0, 250);
+    });
+    values.landing_page = window.location.href.slice(0, 1000);
+    values.language = currentLanguage;
+    return values;
+  }
+
+  function numberFromField(field, maximum = Number.MAX_SAFE_INTEGER) {
+    const value = Number.parseFloat(field?.value || "0");
+    if (!Number.isFinite(value)) return 0;
+    return Math.min(Math.max(value, 0), maximum);
+  }
+
+  function getRoiEstimate() {
+    const techBaseline = numberFromField(roiFields.tech);
+    const manualBaseline = numberFromField(roiFields.manual);
+    const spendBaseline = numberFromField(roiFields.spend);
+    const techRate = numberFromField(roiFields.techRate, 100);
+    const manualRate = numberFromField(roiFields.manualRate, 100);
+    const spendRate = numberFromField(roiFields.spendRate, 100);
+    const techValue = techBaseline * (techRate / 100);
+    const manualValue = manualBaseline * (manualRate / 100);
+    const spendValue = spendBaseline * (spendRate / 100);
+    const annualValue = techValue + manualValue + spendValue;
+
+    return {
+      currency: roiFields.currency?.value || "USD",
+      techBaseline,
+      manualBaseline,
+      spendBaseline,
+      techRate,
+      manualRate,
+      spendRate,
+      techValue,
+      manualValue,
+      spendValue,
+      annualValue,
+      threeYearValue: annualValue * 3
+    };
+  }
+
+  function formatRoiMoney(value, currency) {
+    try {
+      return new Intl.NumberFormat(currentLanguage === "ar" ? "ar" : "en", {
+        style: "currency",
+        currency,
+        currencyDisplay: "code",
+        maximumFractionDigits: 0
+      }).format(value);
+    } catch (_) {
+      return `${currency} ${Math.round(value).toLocaleString(currentLanguage === "ar" ? "ar" : "en")}`;
+    }
+  }
+
+  function updateRoi() {
+    if (!roiCalculator) return;
+    const estimate = getRoiEstimate();
+    if (roiOutputs.annual) roiOutputs.annual.textContent = formatRoiMoney(estimate.annualValue, estimate.currency);
+    if (roiOutputs.tech) roiOutputs.tech.textContent = formatRoiMoney(estimate.techValue, estimate.currency);
+    if (roiOutputs.manual) roiOutputs.manual.textContent = formatRoiMoney(estimate.manualValue, estimate.currency);
+    if (roiOutputs.spend) roiOutputs.spend.textContent = formatRoiMoney(estimate.spendValue, estimate.currency);
+    if (roiOutputs.threeYear) roiOutputs.threeYear.textContent = formatRoiMoney(estimate.threeYearValue, estimate.currency);
+
+    root.dataset.roiAnnualValue = String(Math.round(estimate.annualValue));
+    root.dataset.roiCurrency = estimate.currency;
+  }
+
+  function setRoiExample() {
+    if (!roiCalculator) return;
+    roiFields.currency.value = "USD";
+    roiFields.tech.value = "300000";
+    roiFields.manual.value = "250000";
+    roiFields.spend.value = "5000000";
+    roiFields.techRate.value = "10";
+    roiFields.manualRate.value = "15";
+    roiFields.spendRate.value = "1";
+    updateRoi();
+    pushAnalytics("erp_roi_example_loaded", { language: currentLanguage, currency: "USD", annual_value: 117500 });
+  }
+
+  function clearRoiBaselines() {
+    [roiFields.tech, roiFields.manual, roiFields.spend].forEach((field) => {
+      if (field) field.value = "";
+    });
+    updateRoi();
+    roiFields.tech?.focus();
+  }
+
+  function buildContactFormPayload() {
+    const values = new FormData(form);
+    const name = String(values.get("full_name") || "").trim();
+    const email = String(values.get("email") || "").trim();
+    const phone = String(values.get("phone") || "").trim();
+    const company = String(values.get("company") || "").trim();
+    const country = String(values.get("country") || "").trim();
+    const objective = String(values.get("objective") || "").trim();
+    const details = String(values.get("message") || "").trim();
+    const attribution = getAttribution();
+    const estimate = getRoiEstimate();
+    const lines = [
+      "Oracle ERP landing page enquiry",
+      `Company: ${company}`,
+      `Country: ${country}`,
+      `Primary objective: ${objective}`,
+      `Preferred page language: ${currentLanguage}`,
+      "Illustrative ROI calculator (not a quote or guarantee):",
+      `Currency: ${estimate.currency}`,
+      `Current annual technology run cost: ${Math.round(estimate.techBaseline)}`,
+      `Annual manual-work value: ${Math.round(estimate.manualBaseline)}`,
+      `Addressable annual procurement spend: ${Math.round(estimate.spendBaseline)}`,
+      `Assumptions — technology: ${estimate.techRate}%, capacity: ${estimate.manualRate}%, procurement: ${estimate.spendRate}%`,
+      `Potential annual gross value: ${Math.round(estimate.annualValue)}`,
+      details ? `Additional details: ${details}` : "Additional details: Not provided",
+      ...Object.entries(attribution).map(([key, value]) => `${key}: ${value}`)
+    ];
+
+    const payload = new FormData();
+    payload.set("_wpcf7", root.dataset.formId || "1062");
+    payload.set("_wpcf7_version", root.dataset.formVersion || "6.1.6");
+    payload.set("_wpcf7_locale", "en_US");
+    payload.set("_wpcf7_unit_tag", `wpcf7-f${root.dataset.formId || "1062"}-o1`);
+    payload.set("_wpcf7_container_post", "0");
+    payload.set("_wpcf7_posted_data_hash", "");
+    payload.set("your-name", name);
+    payload.set("email", email);
+    payload.set("telephone", phone);
+    payload.set("subject", `Oracle ERP consultation — ${company} — ${country}`);
+    payload.set("message", lines.join("\n"));
+    return payload;
+  }
+
+  function loadRecaptcha() {
+    if (window.grecaptcha) return Promise.resolve(window.grecaptcha);
+    const existing = document.getElementById("guardia-erp-recaptcha");
+
+    return new Promise((resolve, reject) => {
+      const timeout = window.setTimeout(() => reject(new Error("reCAPTCHA timed out")), 12000);
+      const finish = () => {
+        window.clearTimeout(timeout);
+        if (window.grecaptcha) resolve(window.grecaptcha);
+        else reject(new Error("reCAPTCHA unavailable"));
+      };
+
+      if (existing) {
+        existing.addEventListener("load", finish, { once: true });
+        existing.addEventListener("error", () => reject(new Error("reCAPTCHA failed to load")), { once: true });
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.id = "guardia-erp-recaptcha";
+      script.src = `https://www.google.com/recaptcha/api.js?render=${encodeURIComponent(root.dataset.recaptchaSitekey)}`;
+      script.async = true;
+      script.defer = true;
+      script.addEventListener("load", finish, { once: true });
+      script.addEventListener("error", () => reject(new Error("reCAPTCHA failed to load")), { once: true });
+      document.head.appendChild(script);
+    });
+  }
+
+  async function getRecaptchaToken() {
+    const recaptcha = await loadRecaptcha();
+    return new Promise((resolve, reject) => {
+      recaptcha.ready(async () => {
+        try {
+          const token = await recaptcha.execute(root.dataset.recaptchaSitekey, { action: "contactform" });
+          resolve(token);
+        } catch (error) {
+          reject(error);
+        }
+      });
+    });
+  }
+
+  async function submitLead(event) {
+    event.preventDefault();
+    if (!validateStep(2) || submitButton.disabled) return;
+
+    submitButton.disabled = true;
+    submitButton.setAttribute("aria-busy", "true");
+    submitLabel.textContent = copy[currentLanguage].loading;
+    setStatus("", "");
+
+    pushAnalytics("erp_lead_submit_attempt", {
+      language: currentLanguage,
+      country: form.elements.country?.value || "",
+      objective: form.elements.objective?.value || ""
+    });
+
+    try {
+      const isLocal = !/^https?:$/.test(window.location.protocol) || /^(localhost|127\.|0\.0\.0\.0|\[::1\])/.test(window.location.hostname);
+      const useApi = !liveHost && !isLocal && root.dataset.leadApi;
+
+      if (useApi) {
+        const data = buildContactFormPayload();
+        const response = await window.fetch(root.dataset.leadApi, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            name: data.get("your-name"),
+            email: data.get("email"),
+            phone: data.get("telephone"),
+            subject: data.get("subject"),
+            message: data.get("message"),
+            website: String(new FormData(form).get("website") || "")
+          })
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || !result.ok) throw new Error(result.error || `Request failed with ${response.status}`);
+        leadSubmitted = true;
+        setStatus("success", copy[currentLanguage].success);
+        form.reset();
+        showStep(1);
+        pushAnalytics("erp_lead_submit_success", { language: currentLanguage });
+        return;
+      }
+
+      if (!liveHost) {
+        await new Promise((resolve) => window.setTimeout(resolve, 650));
+        setStatus("success", copy[currentLanguage].demo);
+        pushAnalytics("erp_lead_demo_validated", { language: currentLanguage });
+        return;
+      }
+
+      const payload = buildContactFormPayload();
+      const token = await getRecaptchaToken();
+      payload.set("_wpcf7_recaptcha_response", token);
+
+      const response = await window.fetch(root.dataset.formEndpoint, {
+        method: "POST",
+        body: payload,
+        credentials: "same-origin",
+        headers: { Accept: "application/json" }
+      });
+
+      if (!response.ok) throw new Error(`Request failed with ${response.status}`);
+      const result = await response.json();
+      if (result.status !== "mail_sent") {
+        throw new Error(result.message || result.status || "Contact form rejected the request");
+      }
+
+      leadSubmitted = true;
+      setStatus("success", copy[currentLanguage].success);
+      form.reset();
+      showStep(1);
+      pushAnalytics("erp_lead_submit_success", { language: currentLanguage });
+    } catch (error) {
+      setStatus("error", copy[currentLanguage].error, true);
+      pushAnalytics("erp_lead_submit_error", {
+        language: currentLanguage,
+        message: String(error?.message || "Unknown error").slice(0, 180)
+      });
+    } finally {
+      submitButton.disabled = false;
+      submitButton.removeAttribute("aria-busy");
+      submitLabel.textContent = submitLabel.dataset[currentLanguage] || submitLabel.dataset.en;
+    }
+  }
+
+  languageButtons.forEach((button) => {
+    button.addEventListener("click", () => setLanguage(button.dataset.language));
+  });
+
+  root.querySelectorAll("input, select, textarea").forEach((field) => {
+    field.addEventListener("input", () => field.removeAttribute("aria-invalid"));
+    field.addEventListener("change", () => field.removeAttribute("aria-invalid"));
+  });
+
+  nextButton?.addEventListener("click", () => {
+    if (!validateStep(1)) return;
+    showStep(2);
+    pushAnalytics("erp_lead_step_complete", { step: 1, language: currentLanguage });
+  });
+
+  previousButton?.addEventListener("click", () => {
+    setStatus("", "");
+    showStep(1);
+  });
+
+  form?.addEventListener("submit", submitLead);
+
+  Object.values(roiFields).forEach((field) => {
+    field?.addEventListener("input", updateRoi);
+    field?.addEventListener("change", updateRoi);
+  });
+  roiExampleButton?.addEventListener("click", setRoiExample);
+  roiClearButton?.addEventListener("click", clearRoiBaselines);
+  roiCta?.addEventListener("click", () => {
+    const estimate = getRoiEstimate();
+    pushAnalytics("erp_roi_cta_click", {
+      language: currentLanguage,
+      currency: estimate.currency,
+      annual_value: Math.round(estimate.annualValue)
+    });
+  });
+
+  root.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", (event) => {
+      const target = root.querySelector(anchor.getAttribute("href"));
+      if (!target) return;
+      event.preventDefault();
+      target.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      if (anchor.getAttribute("href") === "#g-consultation") {
+        pushAnalytics("erp_consultation_cta_click", { language: currentLanguage });
+      }
+    });
+  });
+
+  root.querySelectorAll(".g-accordion details").forEach((details) => {
+    details.addEventListener("toggle", () => {
+      if (!details.open) return;
+      root.querySelectorAll(".g-accordion details").forEach((other) => {
+        if (other !== details) other.open = false;
+      });
+    });
+  });
+
+
+  /* ------------------------------------------------------------------
+     Module tabs
+  ------------------------------------------------------------------ */
+  const tabs = Array.from(root.querySelectorAll("[data-tab]"));
+  const panels = Array.from(root.querySelectorAll(".g-tab-panel"));
+
+  function selectTab(index, focus = false) {
+    tabs.forEach((tab, i) => {
+      const active = i === index;
+      tab.classList.toggle("is-active", active);
+      tab.setAttribute("aria-selected", String(active));
+      tab.tabIndex = active ? 0 : -1;
+      if (panels[i]) panels[i].hidden = !active;
+      if (active && focus) tab.focus();
+    });
+    pushAnalytics("erp_module_tab", { module: tabs[index]?.textContent.trim(), language: currentLanguage });
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => selectTab(index));
+    tab.addEventListener("keydown", (event) => {
+      const rtl = root.dir === "rtl";
+      const next = rtl ? "ArrowLeft" : "ArrowRight";
+      const previous = rtl ? "ArrowRight" : "ArrowLeft";
+      let target = null;
+      if (event.key === next || event.key === "ArrowDown") target = (index + 1) % tabs.length;
+      if (event.key === previous || event.key === "ArrowUp") target = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === "Home") target = 0;
+      if (event.key === "End") target = tabs.length - 1;
+      if (target === null) return;
+      event.preventDefault();
+      selectTab(target, true);
+    });
+  });
+
+  /* ------------------------------------------------------------------
+     Savings percentage (single source: data-savings-percent on root)
+  ------------------------------------------------------------------ */
+  const savingsPercent = `${Number.parseFloat(root.dataset.savingsPercent || "20") || 20}%`;
+  root.querySelectorAll("[data-pct]").forEach((element) => { element.textContent = savingsPercent; });
+
+  /* ------------------------------------------------------------------
+     Sticky mobile call-to-action bar
+  ------------------------------------------------------------------ */
+  const sticky = root.querySelector("[data-sticky]");
+  if (sticky && "IntersectionObserver" in window) {
+    const hidingTargets = [root.querySelector("#g-consultation"), root.querySelector("#g-contact")].filter(Boolean);
+    const inView = new Set();
+    const stickyLinks = Array.from(sticky.querySelectorAll("a"));
+    const syncSticky = () => {
+      const visible = inView.size === 0 && window.scrollY > 400;
+      sticky.classList.toggle("is-visible", visible);
+      sticky.setAttribute("aria-hidden", String(!visible));
+      stickyLinks.forEach((link) => { link.tabIndex = visible ? 0 : -1; });
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) inView.add(entry.target); else inView.delete(entry.target);
+      });
+      syncSticky();
+    }, { threshold: 0.15 });
+    hidingTargets.forEach((target) => observer.observe(target));
+    window.addEventListener("scroll", syncSticky, { passive: true });
+  }
+
+  /* ------------------------------------------------------------------
+     Exit-intent savings popup
+     Desktop: pointer leaves through the top of the window.
+     Touch: quick scroll back up after reading, or 45s of inactivity.
+     Shown once per browser session, never after a lead or while typing.
+  ------------------------------------------------------------------ */
+  const pop = root.querySelector("[data-pop]");
+  const popPanel = pop?.querySelector(".g-pop__panel");
+  const popStorageKey = "guardia-erp-exit-popup";
+  const pageLoadedAt = Date.now();
+  let popOpen = false;
+  let popReturnFocus = null;
+
+  function sessionGet(key) {
+    try { return window.sessionStorage.getItem(key); } catch (_) { return null; }
+  }
+  function sessionSet(key, value) {
+    try { window.sessionStorage.setItem(key, value); } catch (_) { /* optional */ }
+  }
+
+  function userIsFillingForm() {
+    return ["#g-full-name", "#g-email", "#g-phone"].some((selector) => root.querySelector(selector)?.value.trim());
+  }
+
+  function popAllowed() {
+    return Boolean(pop) && !popOpen && !leadSubmitted && !sessionGet(popStorageKey) && !userIsFillingForm();
+  }
+
+  function openPop(reason) {
+    if (!popAllowed()) return;
+    popOpen = true;
+    sessionSet(popStorageKey, "1");
+    popReturnFocus = document.activeElement;
+    pop.hidden = false;
+    document.documentElement.style.overflow = "hidden";
+    popPanel?.focus({ preventScroll: true });
+    pushAnalytics("erp_exit_popup_shown", { reason, language: currentLanguage });
+  }
+
+  function closePop(outcome = "dismiss") {
+    if (!popOpen) return;
+    popOpen = false;
+    pop.hidden = true;
+    document.documentElement.style.overflow = "";
+    if (popReturnFocus && typeof popReturnFocus.focus === "function") popReturnFocus.focus({ preventScroll: true });
+    pushAnalytics("erp_exit_popup_closed", { outcome, language: currentLanguage });
+  }
+
+  if (pop) {
+    pop.querySelectorAll("[data-pop-close]").forEach((element) => element.addEventListener("click", () => closePop("dismiss")));
+    pop.querySelectorAll("[data-pop-go]").forEach((element) => element.addEventListener("click", () => closePop("cta")));
+    pop.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") { event.preventDefault(); closePop("escape"); return; }
+      if (event.key !== "Tab") return;
+      const focusable = Array.from(pop.querySelectorAll("a[href], button:not([disabled])")).filter((el) => el.offsetParent !== null);
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && (document.activeElement === first || document.activeElement === popPanel)) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    });
+
+    // Desktop: cursor leaves through the top edge (heading for tabs, address bar or close button).
+    document.documentElement.addEventListener("mouseleave", (event) => {
+      if (event.clientY <= 0 && Date.now() - pageLoadedAt > 5000) openPop("exit_intent");
+    });
+
+    // Touch devices: fast upward scroll after meaningful depth, or long inactivity.
+    if (window.matchMedia("(pointer: coarse)").matches) {
+      let lastY = window.scrollY;
+      let lastTime = Date.now();
+      let idleTimer = null;
+      const armIdle = () => {
+        window.clearTimeout(idleTimer);
+        idleTimer = window.setTimeout(() => openPop("inactivity"), 45000);
+      };
+      window.addEventListener("scroll", () => {
+        const now = Date.now();
+        const y = window.scrollY;
+        const depth = y / Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        const speed = (lastY - y) / Math.max(1, now - lastTime);
+        if (speed > 1.4 && depth > 0.3 && now - pageLoadedAt > 8000) openPop("scroll_up");
+        lastY = y;
+        lastTime = now;
+        armIdle();
+      }, { passive: true });
+      armIdle();
+    }
+
+    // Test hook: add ?exitpopup=1 to the URL to open it immediately (ignores the once-per-session limit).
+    if (new URLSearchParams(window.location.search).get("exitpopup") === "1") {
+      try { window.sessionStorage.removeItem(popStorageKey); } catch (_) { /* optional */ }
+      window.setTimeout(() => openPop("preview"), 600);
+    }
+  }
+
+  if (currentYear) currentYear.textContent = String(new Date().getFullYear());
+
+  const requestedLanguage = new URLSearchParams(window.location.search).get("lang");
+  const storedLanguage = safeStorageGet(languageStorageKey);
+  const browserLanguage = navigator.language?.toLowerCase().startsWith("ar") ? "ar" : "en";
+  setLanguage(requestedLanguage || storedLanguage || browserLanguage, false);
+  showStep(1);
+})();</script>
+</body>
+</html>

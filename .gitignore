@@ -1,0 +1,6 @@
+_backup-v1/
+assets/_sheet.jpg
+.vercel
+node_modules
+.DS_Store
+.env*
